@@ -8,10 +8,11 @@ export const Wrapper = styled.div`
   flex-direction: row;
   box-sizing: border-box;
   flex-wrap: wrap;
-  padding: 100px 220px;
+  padding: 60px 200px;
   gap: 50px;
   background-color: white;
   ${mobile} {
+    width: auto;
     padding: 80px 0;
     gap: 10px;
     justify-content: space-evenly;
@@ -24,15 +25,20 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   ${mobile} {
-    width: 190px;
-    height: 240px;
+    width: 160px;
+    height: 220px;
   }
 `;
 
 export const CardMedia = styled.img`
-  width: 100%;
+  max-width: 100%;
   height: 240px;
+  transition: all 0.4s ease-in-out;
+  display: block;
   border-radius: 8px;
+  &:hover {
+    transform: scale(1.04);
+  }
 `;
 
 export const CardDetails = styled.div`

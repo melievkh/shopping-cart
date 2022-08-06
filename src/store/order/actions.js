@@ -6,3 +6,10 @@ export const getAllOrders = () => (dispatch) => {
     .then((res) => dispatch({ type: 'GET_ALL_ORDERS', payload: res.data }))
     .catch((err) => console.log(err.response.data));
 };
+
+export const getMyOrders = () => (dispatch) => {
+  orderApi
+    .getMyOrders()
+    .then((res) => dispatch({ type: 'GET_ALL_ORDERS', payload: res.data }))
+    .catch((err) => console.log(err.response.data));
+};

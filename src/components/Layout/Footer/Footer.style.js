@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import colors from '../../../styles/color/colors';
+import mobile from '../../../styles/media/media';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -15,10 +16,16 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     gap: 40px;
+    ${mobile} {
+      gap: 20px;
+    }
     li {
       font-size: 20px;
       color: ${colors.avatar};
       cursor: pointer;
+      ${mobile} {
+        font-size: 12px;
+      }
     }
   }
   svg {
@@ -26,6 +33,9 @@ export const Wrapper = styled.div`
     &:hover {
       margin-top: -10px;
       transition: 0.3s;
+    }
+    ${mobile} {
+      font-size: 16px;
     }
   }
   hr {
@@ -38,5 +48,9 @@ export const Wrapper = styled.div`
       #fff,
       rgba(0, 0, 0, 0)
     );
+  }
+  ${mobile} {
+    height: 140px;
+    gap: 10px;
   }
 `;

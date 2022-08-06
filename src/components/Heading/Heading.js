@@ -12,7 +12,7 @@ const headingSize = {
   md: css`
     font-size: 18px;
     ${mobile} {
-      font-size: 12px;
+      font-size: 10px;
     }
   `,
   lg: css`

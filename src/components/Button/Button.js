@@ -21,7 +21,8 @@ const Button = styled.button`
     transition: 0.3s;
   }
   ${mobile} {
-    height: 22px;
+    height: 20px;
+    font-size: 14px;
   }
 `;
 

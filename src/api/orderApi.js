@@ -5,7 +5,9 @@ const orderApi = {
 
   getAllOrders: () => api.get('/orders'),
 
-  deleteOrder: () => api.delete('/orders/:id')
+  getMyOrders: () => api.get('/orders/myorders'),
+
+  deleteOrder: () => api.delete('/orders/:id'),
 };
 
 export default orderApi;

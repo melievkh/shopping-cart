@@ -25,7 +25,7 @@ const headingSize = {
 
 const Heading = styled.h1`
   ${({ size }) => headingSize[size || 'md']};
-  color: ${({ secondary }) => (secondary ? '#f8f7fa' : colors.heading)};
+  color: ${({ secondary }) => (secondary ? '#f8f7fa' : colors.grey)};
   text-align: ${({ align }) => align || 'center'};
   margin: ${({ margin }) => margin || 0};
   font-family: monospace;

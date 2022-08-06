@@ -5,7 +5,7 @@ import colors from '../../../styles/color/colors';
 export const Wrapper = styled.div`
   width: fit-content;
   height: 100%;
-  background-color: ${colors.bgColor};
+  background-color: ${colors.blue};
   position: relative;
   box-sizing: border-box;
   padding: 0 20px;

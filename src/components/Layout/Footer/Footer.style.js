@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 26px;
-  background-color: ${colors.bgColor};
+  background-color: ${colors.blue};
   ul {
     list-style-type: none;
     display: flex;

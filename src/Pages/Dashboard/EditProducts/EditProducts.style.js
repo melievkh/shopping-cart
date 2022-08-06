@@ -20,7 +20,7 @@ export const Table = styled.table`
   height: auto;
   border-collapse: collapse;
   border-radius: 8px;
-  background-color: ${colors.bgColor};
+  background-color: ${colors.blue};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   th {
     padding: 0 10px;
@@ -29,7 +29,7 @@ export const Table = styled.table`
     font-size: 16px;
     border: 1px solid grey;
     color: #f3f3f3;
-    background-color: ${colors.bgColor};
+    background-color: ${colors.blue};
   }
   td {
     padding: 2px 10px;

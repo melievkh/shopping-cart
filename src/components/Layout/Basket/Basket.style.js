@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../../styles/color/colors';
 import mobile from '../../../styles/media/media';
 import FlexBox from '../../Flexbox/FlexBox';
 import Heading from '../../Heading/Heading';
@@ -60,6 +61,7 @@ export const Cards = styled.div`
   flex-direction: row;
   gap: 8px;
   box-sizing: border-box;
+  border-bottom: 1px solid ${colors.azure};
 `;
 export const CardMedia = styled.img`
   width: 60px;

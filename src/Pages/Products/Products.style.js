@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
   flex-direction: row;
   box-sizing: border-box;
   flex-wrap: wrap;
-  padding: 60px 200px;
-  gap: 50px;
+  padding: 80px 80px;
+  gap: 20px;
   background-color: white;
   ${mobile} {
     width: auto;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 270px;
+  width: 280px;
   height: 360px;
   display: flex;
   flex-direction: column;
@@ -30,16 +30,25 @@ export const Card = styled.div`
   }
 `;
 
-export const CardMedia = styled.img`
+export const CardMedia = styled.div`
   max-width: 100%;
-  height: 240px;
+  height: 190px;
   transition: all 0.4s ease-in-out;
   display: block;
   border-radius: 8px;
+  padding: 14px 14px;
   &:hover {
     transform: scale(1.04);
   }
 `;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+`
 
 export const CardDetails = styled.div`
   width: 100%;

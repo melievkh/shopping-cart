@@ -4,8 +4,8 @@ import mobile from '../../styles/media/media';
 export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(2, 3, 10, 0.2), rgba(5, 3, 12, 0.2)),
-    url('https://cdn.delever.uz/delever/3148e595-dc63-4f44-9acc-b17cb3e870ca')
+  background: linear-gradient(rgba(5, 3, 23, 0.2), rgba(5, 3, 143, 0.2)),
+    url('http://billionnews.ru/uploads/posts/2016-12/1481043901_1.jpg')
       center center;
   background-size: cover;
   display: flex;

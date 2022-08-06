@@ -10,7 +10,7 @@ const textSize = {
     }
   `,
   md: css`
-    font-size: 14px;
+    font-size: 16px;
     ${mobile} {
       font-size: 10px;
     }

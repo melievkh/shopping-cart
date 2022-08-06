@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Card, CardDetails, CardMedia, Wrapper } from './Products.style';
+import { Card, CardDetails, CardMedia, Image, Wrapper } from './Products.style';
 import {
   decrementProductByOne,
   getAllProducts,
@@ -20,12 +20,14 @@ const Products = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper id="products">
       {products?.map((product) => (
         <Card key={product.id}>
-          <CardMedia src={product.picture} alt="Loading..." />
+          <CardMedia>
+            <Image src={product.picture} alt='Loading...'/>
+          </CardMedia>
           <CardDetails>
-            <Heading size="md" align="start">
+            <Heading align="start">
               {product.name}
             </Heading>
             <Text align="start">{product.description}</Text>

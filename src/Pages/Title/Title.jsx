@@ -14,7 +14,11 @@ const Title = () => {
         >
           Milliy Taomlar <br /> Uyga yetkazib berish xizmati bilan!
         </Heading>
-        <Button wd="160px">Menyuga o'tish</Button>
+        <a href="#products">
+          <Button wd="160px" hg="45px">
+            Menyuga o'tish
+          </Button>
+        </a>
       </TitleContainer>
     </Wrapper>
   );

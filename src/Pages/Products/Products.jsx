@@ -24,12 +24,10 @@ const Products = () => {
       {products?.map((product) => (
         <Card key={product.id}>
           <CardMedia>
-            <Image src={product.picture} alt='Loading...'/>
+            <Image src={product.picture} alt="Loading..." />
           </CardMedia>
           <CardDetails>
-            <Heading align="start">
-              {product.name}
-            </Heading>
+            <Heading align="start">{product.name}</Heading>
             <Text align="start">{product.description}</Text>
             <FlexBox row justifyContent="space-between">
               <Heading>{product.price} so'm</Heading>

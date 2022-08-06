@@ -1,5 +1,3 @@
-// import products from '../../mock/products';
-
 const initialState = {
   products: [],
   sum: 0,
@@ -47,7 +45,7 @@ const productReducer = (state = initialState, action) => {
         }),
         sum: state.sum - action.payload.price,
       };
-      
+
     default:
       return state;
   }

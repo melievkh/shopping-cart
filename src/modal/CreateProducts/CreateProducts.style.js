@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../styles/color/colors'
+import colors from '../../styles/color/colors';
 
 export const Form = styled.form`
   width: 350px;

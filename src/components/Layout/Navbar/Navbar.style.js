@@ -31,7 +31,7 @@ export const DropdownContent = styled.div`
   border-radius: 4px;
   min-width: 100px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  z-index: 1;
+  z-index: 0;
   li {
     display: flex;
     justify-content: center;

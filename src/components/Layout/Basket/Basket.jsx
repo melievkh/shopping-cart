@@ -69,15 +69,15 @@ const Basket = () => {
         .then((res) => console.log(res.data))
         .catch((err) => console.log(err.response.data));
       dispatch(getAllProducts());
+      swal('', 'Buyurtma muvafaqqiyatli yaratildi!', 'success');
     }
-    swal('', 'Buyurtma muvafaqqiyatli yaratildi!', 'success');
   };
 
   return (
     <Wrapper>
       <Dropdown>
         <BasketWrapper>
-          <FiShoppingCart style={{ color: colors.blue }} />
+          <FiShoppingCart />
           <Logo>Savatcha</Logo>
           {amount === 0 ? '' : <AmountDisplayer>{amount}</AmountDisplayer>}
         </BasketWrapper>

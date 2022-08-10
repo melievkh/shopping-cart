@@ -102,6 +102,9 @@ export const BasketWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  svg{
+    color: ${colors.blue};
+  }
 `;
 
 export const Image = styled.img`

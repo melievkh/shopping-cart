@@ -4,7 +4,7 @@ import mobile from '../../../styles/media/media';
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 280px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;

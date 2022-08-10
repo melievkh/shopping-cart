@@ -7,7 +7,7 @@ import { Table, Wrapper } from './Order.style';
 
 const Orders = () => {
   const dispatch = useDispatch();
-  const orders = useSelector((state) => state.orders);
+  const orders = useSelector((state) => state.orders.allOrders);
 
   useEffect(() => {
     dispatch(getAllOrders());

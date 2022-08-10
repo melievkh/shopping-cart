@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { ROUTES } from './routes/routes';
@@ -13,6 +13,7 @@ import {
 import AdminRoutes from './components/PrivateRoute/AdminRoutes';
 import Navbar from './components/Layout/Navbar/Navbar';
 import Footer from './components/Layout/Footer/Footer';
+import MyOrders from './Pages/MyOrders/MyOrders';
 
 function Home() {
   return (
@@ -33,9 +34,10 @@ function App() {
       <Route path={ROUTES.HOME} element={<Home />} />
       <Route path={ROUTES.REGISTER} element={<Register />} />
       <Route path={ROUTES.LOGIN} element={<Login />} />
+      <Route path={ROUTES.MY_ORDERS} element={<MyOrders />} />
       {userRole === 'admin' && (
         <Route path={ROUTES.ADMIN} element={<AdminRoutes />}>
-          <Routes index element={<Orders />} />
+          <Route index element={<Orders />} />
           <Route path={ROUTES.EDIT_PRODUCTS} element={<EditProducts />} />
         </Route>
       )}

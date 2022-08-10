@@ -1,19 +1,23 @@
 import styled from 'styled-components';
 import colors from '../../styles/color/colors';
 
-const Wrapper = styled.div`
-  width: 480px;
-  height: fit-content;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: white;
-  border-radius: 8px;
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: space-evenly;
-  padding: 20px 20px;
+  justify-content: space-between;
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   table {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-collapse: collapse;
     border-radius: 8px;
@@ -42,5 +46,3 @@ const Wrapper = styled.div`
     }
   }
 `;
-
-export default Wrapper;

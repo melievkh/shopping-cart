@@ -6,6 +6,7 @@ import Button from '../../Button/Button';
 export const Wrapper = styled.div`
   width: 100%;
   height: 65px;
+  top: 0;
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -14,7 +15,6 @@ export const Wrapper = styled.div`
   gap: 20px;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  position: fixed;
   svg {
     color: ${colors.blue};
     font-size: 26px;
@@ -31,7 +31,6 @@ export const DropdownContent = styled.div`
   border-radius: 4px;
   min-width: 100px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  z-index: 0;
   li {
     display: flex;
     justify-content: center;

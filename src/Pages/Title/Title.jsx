@@ -10,12 +10,12 @@ const Title = () => {
         <Heading
           secondary
           align="start"
-          style={{ fontSize: '40px', fontWeight: '600' }}
+          style={{ fontSize: '40px', fontWeight: 'bold' }}
         >
           Milliy Taomlar <br /> Uyga yetkazib berish xizmati bilan!
         </Heading>
         <a href="#products">
-          <Button wd="160px" hg="45px">
+          <Button wd="200px" hg="40px">
             Menyuga o'tish
           </Button>
         </a>

@@ -3,9 +3,9 @@ import mobile from '../../styles/media/media';
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background: linear-gradient(rgba(5, 3, 23, 0.2), rgba(5, 3, 143, 0.2)),
-    url('http://billionnews.ru/uploads/posts/2016-12/1481043901_1.jpg') center
+    url('https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-food-festival-food-promotion-banner-poster-image_192184.jpg') center
       center;
   background-size: cover;
   display: flex;
@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
 
 export const TitleContainer = styled.div`
   width: 800px;
-  height: 260px;
+  height: 240px;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;

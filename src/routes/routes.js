@@ -4,4 +4,5 @@ export const ROUTES = {
   LOGIN: '/login',
   ADMIN: '/admin',
   EDIT_PRODUCTS: 'edit-products',
+  MY_ORDERS: '/myorders'
 };

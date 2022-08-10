@@ -16,15 +16,11 @@ import Button from '../../Button/Button';
 import Heading from '../../Heading/Heading';
 import Search from '../Search/Search';
 import colors from '../../../styles/color/colors';
-import Modal from '../../Modal/Modal';
-import MyOrders from '../../../modal/MyOrders/MyOrders';
-import useToggle from '../../../hooks/useToggle';
 
 const Navbar = () => {
   let isLoggedIn = useSelector((state) => state.user.isLoggedIn);
   const username = useSelector((state) => state.user.username);
   const navigate = useNavigate();
-  const modal = useToggle();
 
   const logout = () => {
     localStorage.removeItem('user');
@@ -42,7 +38,9 @@ const Navbar = () => {
           <Dropdown>
             <TbUserCircle style={{ color: colors.blue }} />
             <DropdownContent>
-              <li onClick={() => modal.open()}>buyurtmalar</li>
+              <Link to="/myorders" style={{ textDecoration: 'none' }}>
+                <li>buyurtmalar</li>
+              </Link>
               <li onClick={() => logout()}>
                 <FiLogOut />
                 chiqish
@@ -65,9 +63,6 @@ const Navbar = () => {
           </Link>
         </FlexBox>
       )}
-      <Modal isOpen={modal.isOpen} onClose={modal.close}>
-        <MyOrders modal={modal} />
-      </Modal>
     </Wrapper>
   );
 };

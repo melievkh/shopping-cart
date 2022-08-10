@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
-import Sidebar from '../../Pages/Dashboard/Sidebar/Sidebar';
+import Sidebar from './Sidebar/Sidebar';
 
 const Wrapper = styled.div`
   width: 1250px;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   align-items: flex-start;
 `;
 
-const AdminRoutes = () => {
+const AdminLayout = () => {
   return (
     <Wrapper>
       <Sidebar />
@@ -21,4 +21,4 @@ const AdminRoutes = () => {
   );
 };
 
-export default AdminRoutes;
+export default AdminLayout;

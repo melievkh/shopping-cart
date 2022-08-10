@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import colors from '../../../styles/color/colors';
-import mobile from '../../../styles/media/media';
-import FlexBox from '../../Flexbox/FlexBox';
+import colors from '../../styles/color/colors';
+import mobile from '../../styles/media/media';
+import FlexBox from '../Flexbox/FlexBox';
 
 export const Wrapper = styled.div`
   width: 30%;
@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   svg {
     font-size: 28px;
-    ${mobile}{
+    ${mobile} {
       font-size: 22px;
     }
   }

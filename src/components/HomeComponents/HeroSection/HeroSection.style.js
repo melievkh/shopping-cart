@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Button from '../../components/Button/Button';
-import mobile from '../../styles/media/media';
+import mobile from '../../../styles/media/media';
+import Button from '../../Button/Button';
 
 export const Wrapper = styled.div`
   width: 100%;

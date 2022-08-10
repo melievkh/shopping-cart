@@ -1,7 +1,6 @@
 import React from 'react';
 import swal from 'sweetalert';
 import { Dropdown, DropdownContent, Wrapper } from './Navbar.style';
-import Basket from '../Basket/Basket';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { FiLogIn, FiLogOut } from 'react-icons/fi';
@@ -9,7 +8,8 @@ import { TbUserCircle } from 'react-icons/tb';
 import FlexBox from '../../Flexbox/FlexBox';
 import Button from '../../Button/Button';
 import Heading from '../../Heading/Heading';
-import Search from '../Search/Search';
+import Basket from '../../Basket/Basket';
+import Search from '../../Search/Search';
 
 const Navbar = () => {
   let isLoggedIn = useSelector((state) => state.user.isLoggedIn);

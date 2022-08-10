@@ -1,9 +1,8 @@
 import React from 'react';
-import Button from '../../components/Button/Button';
-import Heading from '../../components/Heading/Heading';
-import { TitleButton, TitleContainer, Wrapper } from './Title.style';
+import Heading from '../../Heading/Heading';
+import { TitleButton, TitleContainer, Wrapper } from './HeroSection.style';
 
-const Title = () => {
+const HeroSection = () => {
   return (
     <Wrapper>
       <TitleContainer>
@@ -15,13 +14,11 @@ const Title = () => {
           Milliy Taomlar <br /> Uyga yetkazib berish xizmati bilan!
         </Heading>
         <a href="#products">
-          <TitleButton>
-            Menyuga o'tish
-          </TitleButton>
+          <TitleButton>Menyuga o'tish</TitleButton>
         </a>
       </TitleContainer>
     </Wrapper>
   );
 };
 
-export default Title;
+export default HeroSection;

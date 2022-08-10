@@ -1,28 +1,32 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
+  decrementProductByOne,
+  getAllProducts,
+  incrementProductByOne,
+} from '../../../store/product/actions';
+import Button from '../../Button/Button';
+import FlexBox from '../../Flexbox/FlexBox';
+import Heading from '../../Heading/Heading';
+import Text from '../../Text/Text';
+import {
   Card,
   CardContainer,
   CardDetails,
   CardMedia,
   Wrapper,
 } from './Products.style';
-import {
-  decrementProductByOne,
-  getAllProducts,
-  incrementProductByOne,
-} from '../../store/product/actions';
-import Heading from '../../components/Heading/Heading';
-import Text from '../../components/Text/Text';
-import FlexBox from '../../components/Flexbox/FlexBox';
-import Button from '../../components/Button/Button';
 
 const Products = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products);
 
+  const fetchAllProducts = async () => {
+    await dispatch(getAllProducts());
+  };
+
   useEffect(() => {
-    dispatch(getAllProducts());
+    fetchAllProducts();
   }, []);
 
   return (

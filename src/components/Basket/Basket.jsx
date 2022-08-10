@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import swal from 'sweetalert';
-import { useSelector, useDispatch } from 'react-redux';
+import { FiShoppingCart } from 'react-icons/fi';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import orderApi from '../../../api/orderApi';
+import swal from 'sweetalert';
+import orderApi from '../../api/orderApi';
 import {
   decrementProductByOne,
   getAllProducts,
   incrementProductByOne,
-} from '../../../store/product/actions';
-import { FiShoppingCart } from 'react-icons/fi';
+} from '../../store/product/actions';
+import Button from '../Button/Button';
+import FlexBox from '../Flexbox/FlexBox';
+import Heading from '../Heading/Heading';
 import {
   AmountDisplayer,
   BasketWrapper,
@@ -22,9 +25,6 @@ import {
   ProductsList,
   Wrapper,
 } from './Basket.style';
-import FlexBox from '../../Flexbox/FlexBox';
-import Heading from '../../Heading/Heading';
-import Button from '../../Button/Button';
 
 const Basket = () => {
   const dispatch = useDispatch();

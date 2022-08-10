@@ -18,7 +18,6 @@ import {
   Dropdown,
   DropdownContent,
   Image,
-  Logo,
   OrderButton,
   ProductsList,
   Wrapper,
@@ -26,7 +25,6 @@ import {
 import FlexBox from '../../Flexbox/FlexBox';
 import Heading from '../../Heading/Heading';
 import Button from '../../Button/Button';
-import colors from '../../../styles/color/colors';
 
 const Basket = () => {
   const dispatch = useDispatch();
@@ -77,8 +75,9 @@ const Basket = () => {
     <Wrapper>
       <Dropdown>
         <BasketWrapper>
-          <FiShoppingCart />
-          <Logo>Savatcha</Logo>
+          <span>
+            <FiShoppingCart />
+          </span>
           {amount === 0 ? '' : <AmountDisplayer>{amount}</AmountDisplayer>}
         </BasketWrapper>
         <DropdownContent>

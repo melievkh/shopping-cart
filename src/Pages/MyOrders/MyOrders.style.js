@@ -33,6 +33,7 @@ export const Container = styled.div`
       background-color: ${colors.blue};
     }
     td {
+      height: fit-content;
       padding: 2px 10px;
       border: 1px solid grey;
       font-size: 14px;

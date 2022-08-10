@@ -5,7 +5,7 @@ import Button from '../../Button/Button';
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 65px;
+  height: 60px;
   top: 0;
   background-color: white;
   display: flex;
@@ -15,10 +15,18 @@ export const Wrapper = styled.div`
   gap: 20px;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  svg {
-    color: ${colors.blue};
-    font-size: 26px;
-    cursor: pointer;
+  span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    ${mobile} {
+      width: 34px;
+      height: 34px;
+    }
   }
 `;
 
@@ -33,8 +41,9 @@ export const DropdownContent = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   li {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: start;
+    color: ${colors.grey};
+    text-indent: 4px;
     width: 100%;
     height: 30px;
     list-style-type: none;
@@ -56,12 +65,23 @@ export const DropdownContent = styled.div`
       justify-content: start;
     }
   }
+  ${mobile} {
+    margin-left: -50px;
+  }
 `;
 
 export const Dropdown = styled.div`
   position: relative;
   display: inline-block;
   flex-direction: row;
+  svg {
+    font-size: 30px;
+    color: ${colors.blue};
+    cursor: pointer;
+    ${mobile} {
+      font-size: 24px;
+    }
+  }
   &:hover ${DropdownContent} {
     display: block;
   }

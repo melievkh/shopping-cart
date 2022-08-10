@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../components/Button/Button';
 import Heading from '../../components/Heading/Heading';
-import { TitleContainer, Wrapper } from './Title.style';
+import { TitleButton, TitleContainer, Wrapper } from './Title.style';
 
 const Title = () => {
   return (
@@ -15,9 +15,9 @@ const Title = () => {
           Milliy Taomlar <br /> Uyga yetkazib berish xizmati bilan!
         </Heading>
         <a href="#products">
-          <Button wd="200px" hg="40px">
+          <TitleButton>
             Menyuga o'tish
-          </Button>
+          </TitleButton>
         </a>
       </TitleContainer>
     </Wrapper>

@@ -25,10 +25,10 @@ const textSize = {
 
 const Text = styled.h1`
   ${({ size }) => textSize[size || 'md']};
-  color: ${({ secondary }) => (secondary ? colors.blue : colors.heading)};
+  color: ${({ secondary }) => (secondary ? colors.blue : colors.grey)};
   text-align: ${({ align }) => align || 'center'};
   margin: ${({ margin }) => margin || 0};
-  font-family: monospace;
+  font-family: sans-serif;
 `;
 
 export default Text;

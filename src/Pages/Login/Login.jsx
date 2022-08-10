@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import swal from 'sweetalert';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { FaUserAlt } from 'react-icons/fa';
@@ -14,6 +14,9 @@ import Text from '../../components/Text/Text';
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const user = useSelector((state) => state.user);
+
+  console.log(user);
 
   const [details, setDetails] = useState({
     phoneNumber: '',
@@ -27,7 +30,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(login(details));
-    swal('', 'Tizimga kirish muvafaqqiyatli!', 'success');
+    swal('', 'Saytga muvafaqqiyatli kirildi!', 'success');
     navigate('/');
   };
 
@@ -39,7 +42,7 @@ const Login = () => {
         </Heading>
         <Input
           type="tel"
-          placeholder="Phone number"
+          placeholder="Telefon raqam"
           name="phoneNumber"
           value={details.phoneNumber}
           onChange={handleChange}

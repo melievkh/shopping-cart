@@ -28,7 +28,7 @@ const Heading = styled.h1`
   color: ${({ secondary }) => (secondary ? '#f8f7fa' : colors.grey)};
   text-align: ${({ align }) => align || 'center'};
   margin: ${({ margin }) => margin || 0};
-  font-family: monospace;
+  font-family: 'Roboto Condensed', sans-serif;
 `;
 
 export default Heading;

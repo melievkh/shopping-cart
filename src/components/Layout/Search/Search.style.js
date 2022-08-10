@@ -15,15 +15,17 @@ export const SearchInput = styled(Input)`
   border-radius: 4px 0 0 4px;
   border: 1px solid ${colors.azure};
   background-color: #f8f7fa;
-  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   ${mobile} {
-    width: 160px;
-    height: 22px;
+    width: 120px;
+    height: 30px;
   }
 `;
 
 export const SearchButton = styled(Button)`
   width: 30px;
   border-radius: 0 4px 4px 0;
-  border: 1px solid ${colors.azure}
+  border: 1px solid ${colors.azure};
+  ${mobile} {
+    height: 30px;
+  }
 `;

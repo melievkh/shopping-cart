@@ -2,22 +2,26 @@ import styled from 'styled-components';
 import colors from '../../../styles/color/colors';
 import mobile from '../../../styles/media/media';
 import FlexBox from '../../Flexbox/FlexBox';
-import Heading from '../../Heading/Heading';
 
 export const Wrapper = styled.div`
   width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
+  svg {
+    font-size: 28px;
+    ${mobile}{
+      font-size: 22px;
+    }
+  }
 `;
 
 export const DropdownContent = styled.div`
-  width: 280px;
+  width: 260px;
   height: fit-content;
   max-height: 350px;
   display: none;
-  justify-content: center;
-  align-items: center;
+  margin-left: -300px;
   position: absolute;
   border-radius: 8px;
   background-color: white;
@@ -26,6 +30,7 @@ export const DropdownContent = styled.div`
   padding: 10px 20px;
   ${mobile} {
     width: 220px;
+    margin-left: -240px;
   }
 `;
 
@@ -89,28 +94,21 @@ export const AmountDisplayer = styled.p`
   border-radius: 100%;
 `;
 
-export const Logo = styled(Heading)`
-  font-size: 22px;
-  ${mobile} {
-    display: none;
-  }
-`;
-
 export const BasketWrapper = styled.div`
   width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  svg{
+  svg {
     color: ${colors.blue};
   }
 `;
 
 export const Image = styled.img`
-   width: 100%;
-   height: 200px;
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-`
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+`;

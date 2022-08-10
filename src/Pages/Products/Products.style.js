@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   padding: 80px 0;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #fafbfc;
   span {
     color: ${colors.red};
   }
@@ -31,7 +31,7 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 280px;
+  width: 270px;
   height: 360px;
   display: flex;
   flex-direction: column;
@@ -64,6 +64,7 @@ export const CardMedia = styled.div`
 
 export const CardDetails = styled.div`
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;

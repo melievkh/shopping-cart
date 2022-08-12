@@ -10,7 +10,7 @@ import {
   incrementProductByOne,
 } from '../../store/product/actions';
 import Button from '../Button/Button';
-import FlexBox from '../Flexbox/FlexBox';
+import Flexbox from '../Flexbox/Flexbox';
 import Heading from '../Heading/Heading';
 import {
   AmountDisplayer,
@@ -87,11 +87,11 @@ const Basket = () => {
                 product.added && (
                   <Cards key={product.id}>
                     <CardMedia src={product.picture} />
-                    <FlexBox alignItems="flex-start">
+                    <Flexbox alignItems="flex-start">
                       <Heading>{product.name}</Heading>
                       <ButtonsContainer row justifyContent="space-evenly">
                         <Button
-                          wd="35px"
+                          width="35px"
                           onClick={() =>
                             dispatch(
                               decrementProductByOne(product.id, product.price)
@@ -102,7 +102,7 @@ const Basket = () => {
                         </Button>
                         <Heading>{product.amount}</Heading>
                         <Button
-                          wd="35px"
+                          width="35px"
                           onClick={() =>
                             dispatch(
                               incrementProductByOne(product.id, product.price)
@@ -115,17 +115,17 @@ const Basket = () => {
                           {product.price * product.amount} so'm
                         </Heading>
                       </ButtonsContainer>
-                    </FlexBox>
+                    </Flexbox>
                   </Cards>
                 )
             )}
           </ProductsList>
           <OrderButton>
             {sum === 0 ? (
-              <FlexBox>
+              <Flexbox>
                 <Image src="https://st3.depositphotos.com/1784264/12588/i/950/depositphotos_125880634-stock-photo-man-with-a-magnifying-glass.jpg" />
                 <Heading>Savatcha hozircha bo'sh!</Heading>
-              </FlexBox>
+              </Flexbox>
             ) : (
               <Button justifyContent="space-evenly" onClick={createOrder}>
                 Buyurtma <Heading>{sum} so'm</Heading>

@@ -7,7 +7,7 @@ import productApi from '../../api/productApi';
 import Heading from '../../components/Heading/Heading';
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
-import FlexBox from '../../components/Flexbox/FlexBox';
+import Flexbox from '../../components/Flexbox/Flexbox';
 import Form from './Edit.style';
 
 const Edit = ({ product, modal }) => {
@@ -33,9 +33,9 @@ const Edit = ({ product, modal }) => {
 
   return (
     <Form key={product.id} onSubmit={handleSubmit}>
-      <FlexBox row gap="4px">
+      <Flexbox row gap="4px">
         <FaEdit /> <Heading>Tahrirlash</Heading>
-      </FlexBox>
+      </Flexbox>
       <Input
         type="text"
         placeholder="Nomi"

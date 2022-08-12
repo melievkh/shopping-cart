@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import FlexBox from '../../components/Flexbox/FlexBox';
+import Flexbox from '../../components/Flexbox/Flexbox';
 
-export const Wrapper = styled(FlexBox)`
+export const Wrapper = styled(Flexbox)`
   width: 100%;
   height: 100vh;
 `;

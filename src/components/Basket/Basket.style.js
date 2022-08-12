@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../styles/color/colors';
 import mobile from '../../styles/media/media';
-import FlexBox from '../Flexbox/FlexBox';
+import Flexbox from '../Flexbox/Flexbox';
 
 export const Wrapper = styled.div`
   width: 30%;
@@ -53,7 +53,7 @@ export const ProductsList = styled.div`
     width: 10px;
   }
 `;
-export const ButtonsContainer = styled(FlexBox)`
+export const ButtonsContainer = styled(Flexbox)`
   width: 100%;
   height: 50%;
   gap: 8px;

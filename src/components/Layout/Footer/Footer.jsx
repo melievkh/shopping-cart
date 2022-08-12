@@ -2,7 +2,7 @@ import React from 'react';
 import { Wrapper } from './Footer.style';
 import { FaTelegram, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Heading from '../../Heading/Heading';
-import FlexBox from '../../Flexbox/FlexBox';
+import Flexbox from '../../Flexbox/Flexbox';
 import colors from '../../../styles/color/colors';
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
         <li>Biz haqimizda</li>
         <li>Aloqa</li>
       </ul>
-      <FlexBox row wd="80%" justifyContent="space-between">
+      <Flexbox row width="80%" justifyContent="space-between">
         <Heading style={{ color: colors.avatar }}>
           Ijtimoiy tarmoqlarimiz
         </Heading>
@@ -31,16 +31,16 @@ const Footer = () => {
             <FaYoutube />
           </li>
         </ul>
-      </FlexBox>
+      </Flexbox>
       <hr />
-      <FlexBox row wd="85%" justifyContent="space-between">
+      <Flexbox row width="85%" justifyContent="space-between">
         <Heading style={{ color: colors.avatar }}>
           Foydalanish shartlari
         </Heading>
         <Heading style={{ color: colors.avatar }}>
           Melievkh tomonidan ishlab chiqilgan
         </Heading>
-      </FlexBox>
+      </Flexbox>
     </Wrapper>
   );
 };

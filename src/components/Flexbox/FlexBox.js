@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const FlexBox = styled.div`
+const Flexbox = styled.div`
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   display: flex;
   flex-direction: ${({ row }) => (row ? 'row' : 'column')};
   justify-content: ${({ justifyContent }) => justifyContent || 'center'};
@@ -8,8 +10,6 @@ const FlexBox = styled.div`
   flex-wrap: ${({ flexWrap }) => flexWrap};
   gap: ${({ gap }) => gap};
   background-color: ${({ bgColor }) => bgColor};
-  width: ${({ wd }) => wd};
-  height: ${({ hg }) => hg};
 `;
 
-export default FlexBox;
+export default Flexbox;

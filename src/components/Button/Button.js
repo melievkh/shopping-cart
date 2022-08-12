@@ -3,8 +3,8 @@ import colors from '../../styles/color/colors';
 import mobile from '../../styles/media/media';
 
 const Button = styled.button`
-  width: ${({ wd }) => wd || '100%'};
-  height: ${({ hg }) => hg || '35px'};
+  width: ${({ width }) => width || '100%'};
+  height: ${({ height }) => height || '35px'};
   background-color: ${({ bgColor }) => bgColor || colors.azure};
   border: ${({ border }) => border || 'none'};
   color: ${colors.blue};

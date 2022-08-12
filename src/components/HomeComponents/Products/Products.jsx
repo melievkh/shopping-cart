@@ -6,7 +6,7 @@ import {
   incrementProductByOne,
 } from '../../../store/product/actions';
 import Button from '../../Button/Button';
-import FlexBox from '../../Flexbox/FlexBox';
+import Flexbox from '../../Flexbox/Flexbox';
 import Heading from '../../Heading/Heading';
 import Text from '../../Text/Text';
 import {
@@ -43,11 +43,11 @@ const Products = () => {
             <CardDetails>
               <Heading align="start">{product.name}</Heading>
               <Text align="start">{product.description}</Text>
-              <FlexBox row justifyContent="space-between">
+              <Flexbox row justifyContent="space-between">
                 <Heading>{product.price} so'm</Heading>
                 {product.amount === 0 ? (
                   <Button
-                    wd="120px"
+                    width="120px"
                     onClick={() =>
                       dispatch(incrementProductByOne(product.id, product.price))
                     }
@@ -55,9 +55,9 @@ const Products = () => {
                     Qo'shish
                   </Button>
                 ) : (
-                  <FlexBox row gap="4px">
+                  <Flexbox row gap="4px">
                     <Button
-                      wd="35px"
+                      width="35px"
                       onClick={() =>
                         dispatch(
                           decrementProductByOne(product.id, product.price)
@@ -68,7 +68,7 @@ const Products = () => {
                     </Button>
                     <Text>{product.amount}</Text>
                     <Button
-                      wd="35px"
+                      width="35px"
                       onClick={() =>
                         dispatch(
                           incrementProductByOne(product.id, product.price)
@@ -77,9 +77,9 @@ const Products = () => {
                     >
                       +
                     </Button>
-                  </FlexBox>
+                  </Flexbox>
                 )}
-              </FlexBox>
+              </Flexbox>
             </CardDetails>
           </Card>
         ))}

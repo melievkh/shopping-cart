@@ -6,7 +6,7 @@ import { SidebarToggler, StyledLink, Wrapper } from './Sidebar.style';
 import useToggle from '../../../hooks/useToggle';
 import Heading from '../../../components/Heading/Heading';
 import Modal from '../../../components/Modal/Modal';
-import FlexBox from '../../../components/Flexbox/FlexBox';
+import Flexbox from '../../Flexbox/Flexbox';
 import CreateProducts from '../../../modal/CreateProducts/CreateProducts';
 
 const Sidebar = () => {
@@ -41,7 +41,7 @@ const Sidebar = () => {
         <MdProductionQuantityLimits />
         {isOpen && <Heading secondary>Mahsulotlar</Heading>}
       </StyledLink>
-      <FlexBox
+      <Flexbox
         row
         justifyContent="flex-start"
         gap="8px"
@@ -54,7 +54,7 @@ const Sidebar = () => {
             Qo'shish
           </Heading>
         )}
-      </FlexBox>
+      </Flexbox>
       <Modal isOpen={modal.isOpen} onClose={modal.close}>
         <CreateProducts product={product} modal={modal} />
       </Modal>

@@ -8,7 +8,7 @@ import { Form } from './CreateProducts.style';
 import Heading from '../../components/Heading/Heading';
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
-import FlexBox from '../../components/Flexbox/FlexBox';
+import Flexbox from '../../components/Flexbox/Flexbox';
 
 const CreateProducts = ({ product, modal }) => {
   const [values, setValues] = useState({});
@@ -31,9 +31,9 @@ const CreateProducts = ({ product, modal }) => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <FlexBox row gap="4px">
+      <Flexbox row gap="4px">
         <AiOutlinePlusCircle /> <Heading>Mahsulotni yaratish</Heading>
-      </FlexBox>
+      </Flexbox>
       <Input
         type="text"
         placeholder="Nomi"

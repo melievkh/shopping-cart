@@ -65,12 +65,12 @@ const Products = () => {
                   gap: '16px',
                 }}
               >
-                <Button wd="30px" hg="30px" onClick={() => handleEdit(product)}>
+                <Button width="30px" height="30px" onClick={() => handleEdit(product)}>
                   <BiEditAlt />
                 </Button>
                 <Button
-                  wd="30px"
-                  hg="30px"
+                  width="30px"
+                  height="30px"
                   onClick={() => handleRemove(product.id)}
                 >
                   <MdOutlineDeleteOutline />

@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { FiLogIn, FiLogOut } from 'react-icons/fi';
 import { TbUserCircle } from 'react-icons/tb';
-import FlexBox from '../../Flexbox/FlexBox';
+import Flexbox from '../../Flexbox/Flexbox';
 import Button from '../../Button/Button';
 import Heading from '../../Heading/Heading';
 import Basket from '../../Basket/Basket';
@@ -28,7 +28,7 @@ const Navbar = () => {
       <Heading>Logo</Heading>
       <Search />
       {isLoggedIn ? (
-        <FlexBox row gap="20px">
+        <Flexbox row gap="20px">
           <Basket />
           <Dropdown>
             <span>
@@ -45,15 +45,15 @@ const Navbar = () => {
               </li>
             </DropdownContent>
           </Dropdown>
-        </FlexBox>
+        </Flexbox>
       ) : (
-        <FlexBox row gap="20px">
+        <Flexbox row gap="20px">
           <Link to="/login" style={{ textDecoration: 'none' }}>
             <Button>
               <FiLogIn /> Kirish
             </Button>
           </Link>
-        </FlexBox>
+        </Flexbox>
       )}
     </Wrapper>
   );

@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import {
   decrementProductByOne,
-  getAllProducts,
   incrementProductByOne,
 } from '../../../store/product/actions';
 import Button from '../../Button/Button';
@@ -17,22 +16,17 @@ import {
   Wrapper,
 } from './Products.style';
 
-const Products = () => {
+const Products = ({ title, products }) => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.product.products);
-
-  const fetchAllProducts = async () => {
-    await dispatch(getAllProducts());
-  };
-
-  useEffect(() => {
-    fetchAllProducts();
-  }, []);
 
   return (
     <Wrapper id="products">
       <Heading size="lg">
-        Milliy <span>Taomlar</span>
+        {title || (
+          <>
+            Milliy <span>Taomlar</span>
+          </>
+        )}
       </Heading>
       <CardContainer>
         {products?.map((product) => (

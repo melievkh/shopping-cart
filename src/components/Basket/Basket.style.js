@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import colors from '../../styles/color/colors';
-import mobile from '../../styles/media/media';
+import { COLORS } from '../../styles/colors';
+import mobile from '../../styles/media';
 import Flexbox from '../Flexbox/Flexbox';
 
 export const Wrapper = styled.div`
@@ -9,17 +9,18 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   svg {
-    font-size: 28px;
+    color: ${COLORS.blue};
+    font-size: 20px;
     ${mobile} {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 `;
 
 export const DropdownContent = styled.div`
-  width: 260px;
+  width: 300px;
   height: fit-content;
-  max-height: 350px;
+  max-height: 340px;
   display: none;
   margin-left: -300px;
   position: absolute;
@@ -66,7 +67,7 @@ export const Cards = styled.div`
   flex-direction: row;
   gap: 8px;
   box-sizing: border-box;
-  border-bottom: 1px solid ${colors.azure};
+  border-bottom: 1px solid ${COLORS.azure};
 `;
 export const CardMedia = styled.img`
   width: 60px;
@@ -84,11 +85,11 @@ export const AmountDisplayer = styled.p`
   height: 16px;
   position: absolute;
   top: -6px;
-  left: 20px;
+  left: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 10px;
   background-color: red;
   color: white;
   border-radius: 100%;
@@ -100,9 +101,6 @@ export const BasketWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  svg {
-    color: ${colors.blue};
-  }
 `;
 
 export const Image = styled.img`

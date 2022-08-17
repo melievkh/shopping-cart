@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mobile from '../../../styles/media/media';
+import mobile from '../../../styles/media';
 import Button from '../../Button/Button';
 
 export const Wrapper = styled.div`

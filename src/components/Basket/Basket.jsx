@@ -9,9 +9,11 @@ import {
   getAllProducts,
   incrementProductByOne,
 } from '../../store/product/actions';
+import { COLORS } from '../../styles/colors';
 import Button from '../Button/Button';
 import Flexbox from '../Flexbox/Flexbox';
 import Heading from '../Heading/Heading';
+import Text from '../Text/Text';
 import {
   AmountDisplayer,
   BasketWrapper,
@@ -75,9 +77,10 @@ const Basket = () => {
     <Wrapper>
       <Dropdown>
         <BasketWrapper>
-          <span>
-            <FiShoppingCart />
-          </span>
+          <FiShoppingCart />
+          <Heading size="sm" style={{ color: COLORS.blue }}>
+            savat
+          </Heading>
           {amount === 0 ? '' : <AmountDisplayer>{amount}</AmountDisplayer>}
         </BasketWrapper>
         <DropdownContent>
@@ -88,7 +91,7 @@ const Basket = () => {
                   <Cards key={product.id}>
                     <CardMedia src={product.picture} />
                     <Flexbox alignItems="flex-start">
-                      <Heading>{product.name}</Heading>
+                      <Heading size="sm">{product.name}</Heading>
                       <ButtonsContainer row justifyContent="space-evenly">
                         <Button
                           width="35px"
@@ -100,7 +103,7 @@ const Basket = () => {
                         >
                           -
                         </Button>
-                        <Heading>{product.amount}</Heading>
+                        <Text>{product.amount}</Text>
                         <Button
                           width="35px"
                           onClick={() =>
@@ -111,9 +114,7 @@ const Basket = () => {
                         >
                           +
                         </Button>
-                        <Heading size="sm">
-                          {product.price * product.amount} so'm
-                        </Heading>
+                        <Text>{product.price * product.amount} so'm</Text>
                       </ButtonsContainer>
                     </Flexbox>
                   </Cards>
@@ -128,7 +129,7 @@ const Basket = () => {
               </Flexbox>
             ) : (
               <Button justifyContent="space-evenly" onClick={createOrder}>
-                Buyurtma <Heading>{sum} so'm</Heading>
+                Buyurtma <Text>{sum} so'm</Text>
               </Button>
             )}
           </OrderButton>

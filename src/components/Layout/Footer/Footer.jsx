@@ -3,7 +3,7 @@ import { Wrapper } from './Footer.style';
 import { FaTelegram, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Heading from '../../Heading/Heading';
 import Flexbox from '../../Flexbox/Flexbox';
-import colors from '../../../styles/color/colors';
+import { COLORS } from '../../../styles/colors';
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
         <li>Aloqa</li>
       </ul>
       <Flexbox row width="80%" justifyContent="space-between">
-        <Heading style={{ color: colors.avatar }}>
+        <Heading style={{ color: COLORS.avatar }}>
           Ijtimoiy tarmoqlarimiz
         </Heading>
         <ul>
@@ -34,10 +34,10 @@ const Footer = () => {
       </Flexbox>
       <hr />
       <Flexbox row width="85%" justifyContent="space-between">
-        <Heading style={{ color: colors.avatar }}>
+        <Heading style={{ color: COLORS.avatar }}>
           Foydalanish shartlari
         </Heading>
-        <Heading style={{ color: colors.avatar }}>
+        <Heading style={{ color: COLORS.avatar }}>
           Melievkh tomonidan ishlab chiqilgan
         </Heading>
       </Flexbox>

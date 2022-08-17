@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../../styles/color/colors';
+import { COLORS } from '../../../styles/colors';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   align-items: center;
   max-height: 96vh;
   overflow-y: scroll;
+  background-color: ${({ theme }) => theme.bgColor};
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -24,7 +25,7 @@ export const Table = styled.table`
     font-weight: 700;
     font-size: 16px;
     border: 1px solid grey;
-    background-color: ${colors.blue};
+    background-color: ${COLORS.blue};
     color: #f3f3f3;
   }
   td {

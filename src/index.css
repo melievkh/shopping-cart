@@ -8,8 +8,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-a{
+
+a {
   text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+hr {
+  width: 85%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    #fff,
+    rgba(0, 0, 0, 0)
+  );
 }
 
 code {

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import colors from '../../styles/color/colors';
+import { COLORS } from '../../styles/colors';
 
 const Form = styled.form`
   width: 350px;
   height: fit-content;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: white;
+  background-color: ${({theme})=> theme.bgColor};
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ const Form = styled.form`
     }
   }
   svg {
-    color: ${colors.blue};
+    color: ${COLORS.blue};
     font-size: 24px;
   }
 `;

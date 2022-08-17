@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import colors from '../../../styles/color/colors';
+import { COLORS } from '../../../styles/colors';
 
 export const Wrapper = styled.div`
   width: fit-content;
   height: 100%;
-  background-color: ${colors.blue};
+  background-color: ${({theme})=> theme.bgColor};
   position: relative;
   box-sizing: border-box;
   padding: 0 20px;
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   svg {
     font-size: 26px;
-    color: ${colors.avatar};
+    color: ${COLORS.avatar};
   }
 `;
 
@@ -25,7 +25,7 @@ export const SidebarToggler = styled.button`
   width: 36px;
   height: 36px;
   color: grey;
-  background-color: white;
+  background-color: ${({theme})=> theme.bgColor};
   border: none;
   border-radius: 50%;
   position: absolute;

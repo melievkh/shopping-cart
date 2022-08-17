@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import colors from '../../../styles/color/colors';
-import mobile from '../../../styles/media/media';
+import { COLORS } from '../../../styles/colors';
+import mobile from '../../../styles/media';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -8,9 +8,8 @@ export const Wrapper = styled.div`
   padding: 80px 0;
   display: flex;
   flex-direction: column;
-  background-color: #fafbfc;
   span {
-    color: ${colors.red};
+    color: ${COLORS.red};
   }
 `;
 
@@ -44,10 +43,10 @@ export const Card = styled.div`
 export const CardMedia = styled.div`
   width: 100%;
   height: 60%;
-  background-color: green;
   display: inline-block;
   overflow: hidden;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
   img {
     width: 100%;

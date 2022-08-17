@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import colors from '../../../styles/color/colors';
-import mobile from '../../../styles/media/media';
+import { COLORS } from '../../../styles/colors';
+import mobile from '../../../styles/media';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 26px;
-  background-color: ${colors.blue};
+  gap: 20px;
+  background-color: ${COLORS.blue};
   ul {
     list-style-type: none;
     display: flex;
@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
     }
     li {
       font-size: 20px;
-      color: ${colors.avatar};
+      color: ${COLORS.avatar};
       cursor: pointer;
       ${mobile} {
         font-size: 12px;
@@ -37,17 +37,6 @@ export const Wrapper = styled.div`
     ${mobile} {
       font-size: 16px;
     }
-  }
-  hr {
-    width: 85%;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0),
-      #fff,
-      rgba(0, 0, 0, 0)
-    );
   }
   ${mobile} {
     height: 140px;

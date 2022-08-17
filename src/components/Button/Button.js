@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import colors from '../../styles/color/colors';
-import mobile from '../../styles/media/media';
+import { COLORS } from '../../styles/colors';
+import mobile from '../../styles/media';
 
 const Button = styled.button`
   width: ${({ width }) => width || '100%'};
   height: ${({ height }) => height || '35px'};
-  background-color: ${({ bgColor }) => bgColor || colors.azure};
+  background-color: ${({ bgColor }) => bgColor || COLORS.azure};
   border: ${({ border }) => border || 'none'};
-  color: ${colors.blue};
+  color: ${COLORS.blue};
   font-weight: 600;
   font-size: 16px;
   display: flex;

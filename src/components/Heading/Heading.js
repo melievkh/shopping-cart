@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import colors from '../../styles/color/colors';
-import mobile from '../../styles/media/media';
+import { COLORS } from '../../styles/colors';
+import mobile from '../../styles/media';
 
 const headingSize = {
   sm: css`
@@ -25,10 +25,11 @@ const headingSize = {
 
 const Heading = styled.h1`
   ${({ size }) => headingSize[size || 'md']};
-  color: ${({ secondary }) => (secondary ? '#f8f7fa' : colors.grey)};
+  color: ${({theme})=> theme.heading};
   text-align: ${({ align }) => align || 'center'};
   margin: ${({ margin }) => margin || 0};
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
 `;
 
 export default Heading;

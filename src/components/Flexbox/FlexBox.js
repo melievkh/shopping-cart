@@ -9,7 +9,6 @@ const Flexbox = styled.div`
   align-items: ${({ alignItems }) => alignItems || 'center'};
   flex-wrap: ${({ flexWrap }) => flexWrap};
   gap: ${({ gap }) => gap};
-  background-color: ${({ bgColor }) => bgColor};
 `;
 
 export default Flexbox;

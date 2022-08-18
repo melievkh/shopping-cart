@@ -1,17 +1,22 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { createContext } from 'react';
 import { ThemeProvider } from 'styled-components';
-import Router from './router/Router';
 import { darkTheme, lightTheme } from './styles/colors';
+import Router from './router/Router';
+import useTheme from './hooks/useTheme';
 
-function App() {
-  const theme = useSelector((state) => state.theme.theme);
+export const ThemeContext = createContext();
+
+const App = () => {
+  const { theme, toggleTheme } = useTheme();
+  const currentTheme = theme === 'light' ? lightTheme : darkTheme;
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <Router />
-    </ThemeProvider>
+    <ThemeContext.Provider value={{ theme: theme, toggleTheme: toggleTheme }}>
+      <ThemeProvider theme={currentTheme}>
+        <Router />
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
-}
+};
 
 export default App;

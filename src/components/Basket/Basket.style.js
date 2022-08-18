@@ -8,9 +8,11 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   svg {
-    color: ${COLORS.blue};
+    color: ${({ theme }) => theme.special};
     font-size: 20px;
+
     ${mobile} {
       font-size: 20px;
     }
@@ -20,15 +22,16 @@ export const Wrapper = styled.div`
 export const DropdownContent = styled.div`
   width: 300px;
   height: fit-content;
-  max-height: 340px;
+  max-height: 360px;
   display: none;
   margin-left: -300px;
   position: absolute;
   border-radius: 8px;
-  background-color: white;
+  background-color: ${({theme})=> theme.bgColor};
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   z-index: 1;
   padding: 10px 20px;
+
   ${mobile} {
     width: 220px;
     margin-left: -240px;
@@ -41,6 +44,7 @@ export const Dropdown = styled.div`
   position: relative;
   cursor: pointer;
   display: inline-block;
+
   &:hover ${DropdownContent} {
     display: block;
   }
@@ -50,6 +54,7 @@ export const ProductsList = styled.div`
   height: 80%;
   max-height: 300px;
   overflow-x: scroll;
+
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -69,11 +74,13 @@ export const Cards = styled.div`
   box-sizing: border-box;
   border-bottom: 1px solid ${COLORS.azure};
 `;
+
 export const CardMedia = styled.img`
   width: 60px;
   height: 60px;
   border-radius: 8px;
 `;
+
 export const OrderButton = styled.div`
   height: 20%;
   display: flex;

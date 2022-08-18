@@ -26,7 +26,6 @@ const CreateProducts = ({ product, modal }) => {
   const handleChange = (e) => {
     e.preventDefault();
     setValues({ ...values, [e.target.name]: e.target.value });
-    console.log(values);
   };
 
   return (

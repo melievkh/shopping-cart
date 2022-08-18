@@ -6,16 +6,17 @@ export const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  background-color: ${({ theme }) => theme.bgColor};
 `;
 
 export const Container = styled.div`
   width: 100%;
-  height: fit-content;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
   table {
     width: 80%;
     height: auto;
@@ -30,7 +31,7 @@ export const Container = styled.div`
       font-size: 16px;
       border: 1px solid grey;
       color: #f3f3f3;
-      background-color: ${COLORS.blue};
+      background-color: ${({ theme }) => theme.special};
     }
     td {
       height: fit-content;
@@ -40,10 +41,8 @@ export const Container = styled.div`
       font-weight: 600;
     }
     tr {
-      background-color: white;
-      &:nth-child(even) {
-        background-color: #f3f3f3;
-      }
+      background-color: ${({ theme }) => theme.bgColor};
+      color: ${({ theme }) => theme.heading};
     }
   }
 `;

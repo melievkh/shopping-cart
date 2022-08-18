@@ -8,7 +8,7 @@ import { COLORS } from '../../../styles/colors';
 const Footer = () => {
   return (
     <Wrapper>
-      <Heading secondary size="lg">
+      <Heading size="lg" style={{color: COLORS.azure}}>
         logo
       </Heading>
       <ul>
@@ -17,7 +17,7 @@ const Footer = () => {
         <li>Aloqa</li>
       </ul>
       <Flexbox row width="80%" justifyContent="space-between">
-        <Heading style={{ color: COLORS.avatar }}>
+        <Heading style={{ color: COLORS.azure }}>
           Ijtimoiy tarmoqlarimiz
         </Heading>
         <ul>
@@ -34,10 +34,10 @@ const Footer = () => {
       </Flexbox>
       <hr />
       <Flexbox row width="85%" justifyContent="space-between">
-        <Heading style={{ color: COLORS.avatar }}>
+        <Heading style={{ color: COLORS.azure }}>
           Foydalanish shartlari
         </Heading>
-        <Heading style={{ color: COLORS.avatar }}>
+        <Heading style={{ color: COLORS.azure }}>
           Melievkh tomonidan ishlab chiqilgan
         </Heading>
       </Flexbox>

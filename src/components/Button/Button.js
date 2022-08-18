@@ -7,7 +7,7 @@ const Button = styled.button`
   height: ${({ height }) => height || '35px'};
   background-color: ${({ bgColor }) => bgColor || COLORS.azure};
   border: ${({ border }) => border || 'none'};
-  color: ${COLORS.blue};
+  color: ${COLORS.special};
   font-weight: 600;
   font-size: 16px;
   display: flex;

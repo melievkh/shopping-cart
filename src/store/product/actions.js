@@ -6,7 +6,6 @@ export const getAllProducts = () => (dispatch) => {
     .then((res) => {
       dispatch({ type: 'GET_PRODUCTS', payload: res.data });
     })
-    .catch((err) => console.log(err.response.data));
 };
 
 export const incrementProductByOne = (product, price) => (dispatch) => {

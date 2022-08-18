@@ -4,6 +4,7 @@ import Flexbox from '../../components/Flexbox/Flexbox';
 export const Wrapper = styled(Flexbox)`
   width: 100%;
   height: 100vh;
+  background-color: ${({theme})=> theme.bgColor};
 `;
 
 export const Form = styled.form`
@@ -12,7 +13,7 @@ export const Form = styled.form`
   display: flex;
   gap: 30px;
   flex-direction: column;
-  background-color: white;
+  background-color: ${({theme})=> theme.bgColor};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 8px;
 `;

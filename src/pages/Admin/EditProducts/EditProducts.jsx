@@ -34,7 +34,7 @@ const Products = () => {
         dispatch(getAllProducts());
         swal('', "Mahsulot o'chirildi", 'success');
       })
-      .catch((err) => console.log(err.response.data));
+      .catch((err) => err.response.data);
   };
 
   return (
@@ -65,7 +65,11 @@ const Products = () => {
                   gap: '16px',
                 }}
               >
-                <Button width="30px" height="30px" onClick={() => handleEdit(product)}>
+                <Button
+                  width="30px"
+                  height="30px"
+                  onClick={() => handleEdit(product)}
+                >
                   <BiEditAlt />
                 </Button>
                 <Button

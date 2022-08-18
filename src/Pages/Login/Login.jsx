@@ -14,9 +14,7 @@ import Text from '../../components/Text/Text';
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = useSelector((state) => state.user);
 
-  console.log(user);
 
   const [details, setDetails] = useState({
     phoneNumber: '',

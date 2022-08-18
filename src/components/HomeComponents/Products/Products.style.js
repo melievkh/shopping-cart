@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   padding: 80px 0;
   display: flex;
   flex-direction: column;
+  background-color: ${({theme})=> theme.bgColor};
   span {
     color: ${COLORS.red};
   }

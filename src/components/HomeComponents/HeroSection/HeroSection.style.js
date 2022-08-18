@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   ${mobile} {
     width: auto;
     padding: 30px;
@@ -24,6 +25,7 @@ export const TitleContainer = styled.div`
   align-items: flex-start;
   justify-content: space-around;
   flex-direction: column;
+
   ${mobile} {
     width: auto;
   }

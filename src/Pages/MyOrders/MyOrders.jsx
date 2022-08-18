@@ -43,7 +43,6 @@ const MyOrders = () => {
           </tbody>
         </table>
       </Container>
-      <Footer />
     </Wrapper>
   );
 };

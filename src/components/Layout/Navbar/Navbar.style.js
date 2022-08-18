@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 60px;
   top: 0;
-  background-color: ${({ theme }) => theme.header};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,7 +14,9 @@ export const Wrapper = styled.div`
   gap: 20px;
   padding: 0 80px;
   box-sizing: border-box;
+  background-color: ${({ theme }) => theme.header};
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
   ${mobile} {
     padding: 0;
   }
@@ -27,15 +28,17 @@ export const DropdownContent = styled.div`
   margin-left: -100px;
   display: none;
   position: absolute;
-  background-color: ${({theme})=> theme.bgColor};
+  background-color: ${({ theme }) => theme.bgColor};
   border-radius: 14px;
   border-top-right-radius: 0;
   min-width: 100px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 10px 10px;
+
   span {
     font-size: 12px;
   }
+
   li {
     width: 100%;
     height: 40px;
@@ -44,15 +47,18 @@ export const DropdownContent = styled.div`
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     color: ${COLORS.grey};
     cursor: pointer;
+
     svg {
       font-size: 18px;
       ${mobile} {
         font-size: 14px;
       }
     }
+
     &:hover {
-      background-color: #f2f3f5;
+      color: ${({ theme }) => theme.hover};
     }
+
     ${mobile} {
       text-indent: 4px;
       height: 26px;
@@ -60,9 +66,12 @@ export const DropdownContent = styled.div`
       justify-content: start;
     }
   }
+
   svg {
     font-size: 12px;
+    color: ${({ theme }) => theme.special};
   }
+
   ${mobile} {
     margin-left: -50px;
   }
@@ -72,14 +81,17 @@ export const Dropdown = styled.div`
   position: relative;
   display: inline-block;
   flex-direction: row;
+
   svg {
     font-size: 30px;
-    color: ${COLORS.blue};
+    color: ${({ theme }) => theme.special};
     cursor: pointer;
+
     ${mobile} {
       font-size: 24px;
     }
   }
+
   &:hover ${DropdownContent} {
     display: block;
   }
@@ -89,6 +101,7 @@ export const RegisterButton = styled(Button)`
   &:hover {
     background-color: ${({ bgColor }) => bgColor || '#dfe7f5'};
   }
+
   ${mobile} {
     display: none;
   }

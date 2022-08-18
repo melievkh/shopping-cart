@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import swal from 'sweetalert';
 import {
   Dropdown,
@@ -7,25 +7,24 @@ import {
   Wrapper,
 } from './Navbar.style';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { FiLogIn, FiLogOut } from 'react-icons/fi';
-import { TbUserCircle } from 'react-icons/tb';
+import { useSelector } from 'react-redux';
+import { ThemeContext } from '../../../App';
+import { FiLogIn, FiLogOut, FiSun } from 'react-icons/fi';
 import { BsMoon } from 'react-icons/bs';
+import { TbUserCircle } from 'react-icons/tb';
 import Flexbox from '../../Flexbox/Flexbox';
 import Button from '../../Button/Button';
 import Heading from '../../Heading/Heading';
 import Basket from '../../Basket/Basket';
 import Search from '../../Search/Search';
 import Text from '../../Text/Text';
-import { toggleTheme } from '../../../store/theme/actions';
 
 const Navbar = () => {
-  const dispatch = useDispatch();
   let isLoggedIn = useSelector((state) => state.user.isLoggedIn);
   const username = useSelector((state) => state.user.username);
   const navigate = useNavigate();
 
-  const currentTheme = useSelector((state) => state.theme.theme);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const logout = () => {
     localStorage.removeItem('user');
@@ -36,7 +35,10 @@ const Navbar = () => {
 
   return (
     <Wrapper>
-      <Heading>Logo</Heading>
+      <Link to="/">
+        <Heading>Logo</Heading>
+      </Link>
+
       <Search />
       {isLoggedIn ? (
         <Flexbox row width="160px" gap="20px">
@@ -48,17 +50,15 @@ const Navbar = () => {
             <DropdownContent>
               <Flexbox row justifyContent="center">
                 <Heading>{username}</Heading>
-                <SwitchButton
-                  onClick={() => {
-                    dispatch(toggleTheme(currentTheme));
-                  }}
-                >
-                  <BsMoon />
+                <SwitchButton onClick={toggleTheme}>
+                  {theme === 'light' ? <FiSun /> : <BsMoon />}
                 </SwitchButton>
               </Flexbox>
-              <li>
-                <Text>Asosiy</Text>
-              </li>
+              <Link to="/">
+                <li>
+                  <Text>Asosiy</Text>
+                </li>
+              </Link>
               <Link to="/myorders">
                 <li>
                   <Text>Buyurtmalarim</Text>

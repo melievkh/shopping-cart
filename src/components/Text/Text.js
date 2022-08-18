@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { COLORS } from '../../styles/colors';
 import mobile from '../../styles/media';
 
 const textSize = {

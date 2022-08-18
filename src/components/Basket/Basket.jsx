@@ -9,7 +9,6 @@ import {
   getAllProducts,
   incrementProductByOne,
 } from '../../store/product/actions';
-import { COLORS } from '../../styles/colors';
 import Button from '../Button/Button';
 import Flexbox from '../Flexbox/Flexbox';
 import Heading from '../Heading/Heading';
@@ -36,12 +35,14 @@ const Basket = () => {
   const sum = useSelector((state) => state.product.sum);
   const user = useSelector((state) => state.user);
   const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+  const theme = useSelector((state) => state.theme);
   const [orders, setOrders] = useState({});
 
   const selectedOrders = products.filter((product) => product.added === true);
   const selectedOrdersId = selectedOrders.map((order) => {
     return { amount: order.amount, product: order.id };
   });
+
   const amount = products
     .map((p) => p.amount)
     .reduce((prev, cur) => prev + cur, 0);
@@ -66,8 +67,8 @@ const Basket = () => {
     } else {
       orderApi
         .createOrder(orders)
-        .then((res) => console.log(res.data))
-        .catch((err) => console.log(err.response.data));
+        .then((res) => res.data)
+        .catch((err) => err.response.data);
       dispatch(getAllProducts());
       swal('', 'Buyurtma muvafaqqiyatli yaratildi!', 'success');
     }
@@ -78,12 +79,11 @@ const Basket = () => {
       <Dropdown>
         <BasketWrapper>
           <FiShoppingCart />
-          <Heading size="sm" style={{ color: COLORS.blue }}>
-            savat
-          </Heading>
+          <Heading size="sm">savat</Heading>
           {amount === 0 ? '' : <AmountDisplayer>{amount}</AmountDisplayer>}
         </BasketWrapper>
         <DropdownContent>
+          {sum === 0 ? '' : <Text align="end">Jami: {sum} so'm</Text>}
           <ProductsList>
             {products.map(
               (product) =>
@@ -124,12 +124,16 @@ const Basket = () => {
           <OrderButton>
             {sum === 0 ? (
               <Flexbox>
-                <Image src="https://st3.depositphotos.com/1784264/12588/i/950/depositphotos_125880634-stock-photo-man-with-a-magnifying-glass.jpg" />
+                {theme === 'light' ? (
+                  <Image src="https://st3.depositphotos.com/1784264/12588/i/950/depositphotos_125880634-stock-photo-man-with-a-magnifying-glass.jpg" />
+                ) : (
+                  ''
+                )}
                 <Heading>Savatcha hozircha bo'sh!</Heading>
               </Flexbox>
             ) : (
               <Button justifyContent="space-evenly" onClick={createOrder}>
-                Buyurtma <Text>{sum} so'm</Text>
+                Buyurtma
               </Button>
             )}
           </OrderButton>

@@ -16,11 +16,11 @@ import {
   Wrapper,
 } from './Products.style';
 
-const Products = ({ title, products }) => {
+const Products = ({ title, products }, {inputText}) => {
   const dispatch = useDispatch();
 
   return (
-    <Wrapper id="products">
+    <Wrapper>
       <Heading size="lg">
         {title || (
           <>

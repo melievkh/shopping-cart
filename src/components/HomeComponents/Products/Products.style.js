@@ -8,7 +8,8 @@ export const Wrapper = styled.div`
   padding: 80px 0;
   display: flex;
   flex-direction: column;
-  background-color: ${({theme})=> theme.bgColor};
+  background-color: ${({ theme }) => theme.bgColor};
+
   span {
     color: ${COLORS.red};
   }
@@ -22,6 +23,7 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   padding: 40px 80px;
+
   ${mobile} {
     width: auto;
     padding: 80px 0;
@@ -35,6 +37,7 @@ export const Card = styled.div`
   height: 360px;
   display: flex;
   flex-direction: column;
+
   ${mobile} {
     width: 160px;
     height: 220px;
@@ -49,12 +52,14 @@ export const CardMedia = styled.div`
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
+
   img {
     width: 100%;
     height: 100%;
     display: block;
     transition: transform 0.9s;
   }
+
   &:hover img {
     transform: scale(1.2);
     transform-origin: 50% 50%;

@@ -23,6 +23,7 @@ export const Table = styled.table`
   border-radius: 8px;
   background-color: ${COLORS.blue};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   th {
     padding: 0 10px;
     height: 40px;
@@ -32,12 +33,14 @@ export const Table = styled.table`
     color: #f3f3f3;
     background-color: ${COLORS.blue};
   }
+
   td {
     padding: 2px 10px;
     border: 1px solid grey;
     font-size: 14px;
     font-weight: 600;
   }
+
   tr {
     background-color: white;
     &:nth-child(even) {

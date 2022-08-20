@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import swal from 'sweetalert';
 import {
   Dropdown,
@@ -18,11 +18,13 @@ import Heading from '../../Heading/Heading';
 import Basket from '../../Basket/Basket';
 import Search from '../../Search/Search';
 import Text from '../../Text/Text';
+import { useRef } from 'react';
 
 const Navbar = () => {
   let isLoggedIn = useSelector((state) => state.user.isLoggedIn);
   const username = useSelector((state) => state.user.username);
   const navigate = useNavigate();
+  const navbar = useRef(null);
 
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -33,8 +35,20 @@ const Navbar = () => {
     swal('Saytdan chiqish muvafaqqiyatli bajarildi!');
   };
 
+  let prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      navbar.current.style.top = '0';
+    } else {
+      navbar.current.style.top = '-100px';
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
   return (
-    <Wrapper>
+    <Wrapper ref={navbar}>
       <Link to="/">
         <Heading>Logo</Heading>
       </Link>

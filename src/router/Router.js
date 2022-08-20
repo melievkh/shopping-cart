@@ -21,6 +21,7 @@ function Router() {
       <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />
       <Route path={ROUTES.MY_ORDERS} element={<MyOrdersPage />} />
+
       {userRole === 'admin' && (
         <Route path={ROUTES.ADMIN} element={<AdminLayout />}>
           <Route index element={<OrdersPage />} />

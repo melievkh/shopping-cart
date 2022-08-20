@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Heading from '../../components/Heading/Heading';
-import Footer from '../../components/Layout/Footer/Footer';
 import Navbar from '../../components/Layout/Navbar/Navbar';
 import { getMyOrders } from '../../store/order/actions';
 import { getHour } from '../../utils/dateUtils';
@@ -36,7 +35,7 @@ const MyOrders = () => {
             {orders.map((prod, index) => (
               <tr key={prod._id}>
                 <td>{getHour(prod.createdAt)}</td>
-                <td>{prod.totalPrice}</td>
+                <td>{prod.totalPrice} so'm</td>
                 <td></td>
               </tr>
             ))}

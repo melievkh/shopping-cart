@@ -5,23 +5,23 @@ export const getHour = (str) => {
   var interval = seconds / 31536000;
 
   if (interval > 1) {
-    return Math.floor(interval) + ' years ago';
+    return Math.floor(interval) + ' yil avval';
   }
   interval = seconds / 2592000;
   if (interval > 1) {
-    return Math.floor(interval) + ' months ago';
+    return Math.floor(interval) + ' oy avval';
   }
   interval = seconds / 86400;
   if (interval > 1) {
-    return Math.floor(interval) + ' days ago';
+    return Math.floor(interval) + ' kun avval';
   }
   interval = seconds / 3600;
   if (interval > 1) {
-    return Math.floor(interval) + ' hours ago';
+    return Math.floor(interval) + ' soat avval';
   }
   interval = seconds / 60;
   if (interval > 1) {
-    return Math.floor(interval) + ' minutes ago';
+    return Math.floor(interval) + ' daqiqa avval';
   }
-  return Math.floor(seconds) + ' seconds ago';
+  return Math.floor(seconds) + ' sekund avval';
 };

@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   svg {
     font-size: 26px;
-    color: ${COLORS.azure};
+    color: ${COLORS.special};
   }
 `;
 

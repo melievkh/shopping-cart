@@ -26,7 +26,7 @@ const Form = styled.form`
     }
   }
   svg {
-    color: ${COLORS.blue};
+    color: ${COLORS.special};
     font-size: 24px;
   }
 `;

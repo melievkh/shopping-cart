@@ -6,7 +6,6 @@ import Button from '../../Button/Button';
 export const Wrapper = styled.div`
   width: 100%;
   height: 60px;
-  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,6 +15,10 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.header};
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  svg {
+    color: ${COLORS.azure};
+  }
 
   ${mobile} {
     padding: 0;
@@ -50,6 +53,7 @@ export const DropdownContent = styled.div`
 
     svg {
       font-size: 18px;
+      color: ${COLORS.special};
       ${mobile} {
         font-size: 14px;
       }
@@ -69,11 +73,11 @@ export const DropdownContent = styled.div`
 
   svg {
     font-size: 12px;
-    color: ${({ theme }) => theme.special};
   }
 
   ${mobile} {
-    margin-left: -50px;
+    margin-left: -100px;
+    width: 120px;
   }
 `;
 
@@ -84,7 +88,6 @@ export const Dropdown = styled.div`
 
   svg {
     font-size: 30px;
-    color: ${({ theme }) => theme.special};
     cursor: pointer;
 
     ${mobile} {
@@ -113,4 +116,8 @@ export const SwitchButton = styled(Button)`
   font-size: 20px;
   border-radius: 100%;
   margin-left: 30px;
+
+  svg {
+    color: ${COLORS.white};
+  }
 `;

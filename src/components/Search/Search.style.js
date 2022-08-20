@@ -13,8 +13,9 @@ export const Form = styled.form`
 export const SearchInput = styled(Input)`
   width: 400px;
   border-radius: 4px 0 0 4px;
-  border: 1px solid ${COLORS.azure};
-  background-color: ${({theme})=> theme.bgColor};
+  background-color: ${({ theme }) => theme.bgColor};
+  color: ${({ theme }) => theme.heading};
+  
   ${mobile} {
     width: 120px;
     height: 30px;
@@ -24,7 +25,12 @@ export const SearchInput = styled(Input)`
 export const SearchButton = styled(Button)`
   width: 30px;
   border-radius: 0 4px 4px 0;
-  border: 1px solid ${COLORS.azure};
+  color: ${COLORS.white};
+
+  svg {
+    color: white;
+  }
+
   ${mobile} {
     height: 30px;
   }

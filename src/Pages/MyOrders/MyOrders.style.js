@@ -17,6 +17,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 20px;
+
   table {
     width: 80%;
     height: auto;
@@ -24,6 +25,7 @@ export const Container = styled.div`
     border-radius: 8px;
     background-color: ${COLORS.blue};
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
     th {
       padding: 0 10px;
       height: 30px;
@@ -33,6 +35,7 @@ export const Container = styled.div`
       color: #f3f3f3;
       background-color: ${({ theme }) => theme.special};
     }
+
     td {
       height: fit-content;
       padding: 2px 10px;
@@ -40,6 +43,7 @@ export const Container = styled.div`
       font-size: 14px;
       font-weight: 600;
     }
+
     tr {
       background-color: ${({ theme }) => theme.bgColor};
       color: ${({ theme }) => theme.heading};

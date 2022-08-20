@@ -22,7 +22,7 @@ function Home() {
     <>
       <Navbar />
       <HeroSection />
-      <Products title="Ichimliklar" products={products} />
+      <Products products={products} />
       <Footer />
     </>
   );

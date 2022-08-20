@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
   justify-content: center;
 
   svg {
-    color: ${({ theme }) => theme.special};
     font-size: 20px;
 
     ${mobile} {
@@ -27,14 +26,14 @@ export const DropdownContent = styled.div`
   margin-left: -300px;
   position: absolute;
   border-radius: 8px;
-  background-color: ${({theme})=> theme.bgColor};
+  background-color: ${({ theme }) => theme.bgColor};
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   z-index: 1;
   padding: 10px 20px;
 
   ${mobile} {
-    width: 220px;
-    margin-left: -240px;
+    width: 200px;
+    margin-left: -210px;
   }
 `;
 
@@ -72,7 +71,7 @@ export const Cards = styled.div`
   flex-direction: row;
   gap: 8px;
   box-sizing: border-box;
-  border-bottom: 1px solid ${COLORS.azure};
+  border-bottom: 1px solid ${COLORS.special};
 `;
 
 export const CardMedia = styled.img`

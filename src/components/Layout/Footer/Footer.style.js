@@ -10,17 +10,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background: linear-gradient(
-    90deg,
-    rgba(73, 0, 244, 1) 0%,
-    rgba(45, 14, 184, 1) 26%,
-    rgba(58, 116, 230, 1) 100%,
-    rgba(23, 2, 113, 1) 100%,
-    rgba(109, 80, 199, 1) 100%,
-    rgba(168, 152, 213, 1) 100%,
-    rgba(142, 154, 157, 1) 100%,
-    rgba(30, 37, 46, 1) 100%
-  );
+  background-color: ${COLORS.blue};
   ul {
     list-style-type: none;
     display: flex;
@@ -31,8 +21,9 @@ export const Wrapper = styled.div`
     }
     li {
       font-size: 20px;
-      color: ${COLORS.azure};
+      color: ${COLORS.white};
       cursor: pointer;
+
       ${mobile} {
         font-size: 12px;
       }

@@ -19,6 +19,7 @@ export const Table = styled.table`
   border-collapse: collapse;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
   th {
     padding: 0 10px;
     height: 40px;
@@ -28,12 +29,14 @@ export const Table = styled.table`
     background-color: ${COLORS.blue};
     color: #f3f3f3;
   }
+
   td {
     padding: 2px 10px;
     border: 1px solid grey;
     font-size: 14px;
     font-weight: 600;
   }
+
   tr {
     background-color: white;
     &:nth-child(even) {

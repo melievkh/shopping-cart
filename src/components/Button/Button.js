@@ -5,9 +5,9 @@ import mobile from '../../styles/media';
 const Button = styled.button`
   width: ${({ width }) => width || '100%'};
   height: ${({ height }) => height || '35px'};
-  background-color: ${({ bgColor }) => bgColor || COLORS.azure};
+  background-color: ${({ bgColor }) => bgColor || COLORS.special};
   border: ${({ border }) => border || 'none'};
-  color: ${COLORS.special};
+  color: ${COLORS.white};
   font-weight: 600;
   font-size: 16px;
   display: flex;
@@ -17,7 +17,7 @@ const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   &:hover {
-    background-color: ${({ bgColor }) => bgColor || '#dfe7f5'};
+    background-color: ${({ bgColor }) => bgColor || '#f77e7e'};
     transition: 0.3s;
   }
   ${mobile} {

@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { COLORS } from '../../styles/colors';
+import styled from "styled-components";
+import { COLORS } from "../../styles/colors";
 
 export const Form = styled.form`
   width: 350px;
   height: fit-content;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: ${({theme})=> theme.bgColor};
+  background-color: ${({ theme }) => theme.bgColor};
   border-radius: 8px;
   display: flex;
   flex-direction: column;

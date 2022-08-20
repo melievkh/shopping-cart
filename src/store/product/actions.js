@@ -1,17 +1,15 @@
-import productApi from '../../api/productApi';
+import productApi from "../../api/productApi";
 
 export const getAllProducts = () => (dispatch) => {
-  productApi
-    .getAllProducts()
-    .then((res) => {
-      dispatch({ type: 'GET_PRODUCTS', payload: res.data });
-    })
+  productApi.getAllProducts().then((res) => {
+    dispatch({ type: "GET_PRODUCTS", payload: res.data });
+  });
 };
 
 export const incrementProductByOne = (product, price) => (dispatch) => {
-  dispatch({ type: 'INCREMENT', payload: { product, price } });
+  dispatch({ type: "INCREMENT", payload: { product, price } });
 };
 
 export const decrementProductByOne = (product, price) => (dispatch) => {
-  dispatch({ type: 'DECREMENT', payload: { product, price } });
+  dispatch({ type: "DECREMENT", payload: { product, price } });
 };

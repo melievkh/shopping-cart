@@ -1,16 +1,20 @@
-import { Link } from '@mui/material';
-import React from 'react';
-import Heading from '../../Heading/Heading';
-import { TitleButton, TitleContainer, Wrapper } from './HeroSection.style';
+import { Link } from "@mui/material";
+import React from "react";
+import {
+  TitleHeading,
+  TitleButton,
+  TitleContainer,
+  Wrapper,
+} from "./HeroSection.style";
 
 const HeroSection = () => {
   return (
     <Wrapper>
       <TitleContainer>
-        <Heading align="start" style={{ fontSize: '40px', fontWeight: 'bold', color: '#fff' }}>
+        <TitleHeading>
           Milliy Taomlar <br /> Uyga yetkazib berish xizmati bilan!
-        </Heading>
-        <Link to='/'>
+        </TitleHeading>
+        <Link to="/">
           <TitleButton>Menyuga o'tish</TitleButton>
         </Link>
       </TitleContainer>

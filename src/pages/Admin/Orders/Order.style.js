@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { COLORS } from '../../../styles/colors';
+import styled from "styled-components";
+import { COLORS } from "../../../styles/colors";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ export const Table = styled.table`
   border-collapse: collapse;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  
+
   th {
     padding: 0 10px;
     height: 40px;

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import styled from 'styled-components';
-import Sidebar from './Sidebar/Sidebar';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import styled from "styled-components";
+import Sidebar from "./Sidebar/Sidebar";
 
 const Wrapper = styled.div`
   width: 1250px;

@@ -1,9 +1,9 @@
-import React from 'react';
-import { Wrapper } from './Footer.style';
-import { FaTelegram, FaInstagram, FaYoutube } from 'react-icons/fa';
-import Heading from '../../Heading/Heading';
-import Flexbox from '../../Flexbox/Flexbox';
-import { COLORS } from '../../../styles/colors';
+import React from "react";
+import { Wrapper } from "./Footer.style";
+import { FaTelegram, FaInstagram, FaYoutube } from "react-icons/fa";
+import Heading from "../../Heading/Heading";
+import Flexbox from "../../Flexbox/Flexbox";
+import { COLORS } from "../../../styles/colors";
 
 const Footer = () => {
   return (

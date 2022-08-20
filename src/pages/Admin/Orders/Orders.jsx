@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getHour } from '../../../utils/dateUtils';
-import { getAllOrders } from '../../../store/order/actions';
-import Heading from '../../../components/Heading/Heading';
-import { Table, Wrapper } from './Order.style';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getHour } from "../../../utils/dateUtils";
+import { getAllOrders } from "../../../store/order/actions";
+import Heading from "../../../components/Heading/Heading";
+import { Table, Wrapper } from "./Order.style";
 
 const Orders = () => {
   const dispatch = useDispatch();
+
   const orders = useSelector((state) => state.orders.allOrders);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Orders = () => {
   return (
     <Wrapper>
       <Heading size="md" margin="30px">
-        Buyurtmalar ro'yxati
+        Buyurtmalar royxati
       </Heading>
       <Table>
         <thead>

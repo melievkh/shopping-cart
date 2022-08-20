@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { COLORS } from '../../../styles/colors';
-import mobile from '../../../styles/media';
-import Button from '../../Button/Button';
+import styled from "styled-components";
+import { COLORS } from "../../../styles/colors";
+import mobile from "../../../styles/media";
+import Button from "../../Button/Button";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
   }
 
   ${mobile} {
-    padding: 0;
+    padding: 0 20px;
   }
 `;
 
@@ -102,7 +102,7 @@ export const Dropdown = styled.div`
 
 export const RegisterButton = styled(Button)`
   &:hover {
-    background-color: ${({ bgColor }) => bgColor || '#dfe7f5'};
+    background-color: ${({ bgColor }) => bgColor || "#dfe7f5"};
   }
 
   ${mobile} {

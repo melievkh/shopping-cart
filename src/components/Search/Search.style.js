@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { COLORS } from '../../styles/colors';
-import mobile from '../../styles/media';
-import Button from '../Button/Button';
-import Input from '../Input/Input';
+import styled from "styled-components";
+import { COLORS } from "../../styles/colors";
+import mobile from "../../styles/media";
+import Button from "../Button/Button";
+import Input from "../Input/Input";
 
 export const Form = styled.form`
   width: fit-content;
@@ -15,7 +15,7 @@ export const SearchInput = styled(Input)`
   border-radius: 4px 0 0 4px;
   background-color: ${({ theme }) => theme.bgColor};
   color: ${({ theme }) => theme.heading};
-  
+
   ${mobile} {
     width: 120px;
     height: 30px;
@@ -24,7 +24,8 @@ export const SearchInput = styled(Input)`
 
 export const SearchButton = styled(Button)`
   width: 30px;
-  border-radius: 0 4px 4px 0;
+  margin-left: -28px;
+  border-radius: 0 2px 2px 0;
   color: ${COLORS.white};
 
   svg {

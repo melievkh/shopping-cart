@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { MdOutlineDeleteOutline } from 'react-icons/md';
-import { BiEditAlt } from 'react-icons/bi';
-import { getAllProducts } from '../../../store/product/actions';
-import swal from 'sweetalert';
-import productApi from '../../../api/productApi';
-import useToggle from '../../../hooks/useToggle';
-import Heading from '../../../components/Heading/Heading';
-import { Table, Wrapper } from './EditProducts.style';
-import Modal from '../../../components/Modal/Modal';
-import Edit from '../../../modal/Edit/Edit';
-import Button from '../../../components/Button/Button';
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { BiEditAlt } from "react-icons/bi";
+import { getAllProducts } from "../../../store/product/actions";
+import swal from "sweetalert";
+import productApi from "../../../api/productApi";
+import useToggle from "../../../hooks/useToggle";
+import Heading from "../../../components/Heading/Heading";
+import { Table, Wrapper } from "./EditProducts.style";
+import Modal from "../../../components/Modal/Modal";
+import Edit from "../../../modal/Edit/Edit";
+import Button from "../../../components/Button/Button";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ const Products = () => {
       .deleteProduct(productId)
       .then((res) => {
         dispatch(getAllProducts());
-        swal('', "Mahsulot o'chirildi", 'success');
+        swal("", "Mahsulot o'chirildi", "success");
       })
       .catch((err) => err.response.data);
   };
@@ -47,7 +47,7 @@ const Products = () => {
             <th>Nomi</th>
             <th>Narxi</th>
             <th>Ma'lumotlar</th>
-            <th style={{ width: '120px' }}>T/O'</th>
+            <th style={{ width: "120px" }}>T/O'</th>
           </tr>
         </thead>
         <tbody>
@@ -59,10 +59,10 @@ const Products = () => {
               <td>{product.description}</td>
               <td
                 style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  gap: '16px',
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  gap: "16px",
                 }}
               >
                 <Button

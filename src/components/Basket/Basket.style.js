@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { COLORS } from '../../styles/colors';
-import mobile from '../../styles/media';
-import Flexbox from '../Flexbox/Flexbox';
+import styled from "styled-components";
+import { COLORS } from "../../styles/colors";
+import mobile from "../../styles/media";
+import Flexbox from "../Flexbox/Flexbox";
 
 export const Wrapper = styled.div`
   width: 30%;

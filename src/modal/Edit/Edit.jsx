@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { getAllProducts } from '../../store/product/actions';
-import { FaEdit } from 'react-icons/fa';
-import swal from 'sweetalert';
-import productApi from '../../api/productApi';
-import Heading from '../../components/Heading/Heading';
-import Button from '../../components/Button/Button';
-import Input from '../../components/Input/Input';
-import Flexbox from '../../components/Flexbox/Flexbox';
-import Form from './Edit.style';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getAllProducts } from "../../store/product/actions";
+import { FaEdit } from "react-icons/fa";
+import swal from "sweetalert";
+import productApi from "../../api/productApi";
+import Heading from "../../components/Heading/Heading";
+import Button from "../../components/Button/Button";
+import Input from "../../components/Input/Input";
+import Flexbox from "../../components/Flexbox/Flexbox";
+import Form from "./Edit.style";
 
 const Edit = ({ product, modal }) => {
   const [values, setValues] = useState({});
@@ -18,7 +18,7 @@ const Edit = ({ product, modal }) => {
     e.preventDefault();
     productApi.editProduct(product.id, values).then((res) => {
       dispatch(getAllProducts());
-      swal('', 'Tahrirlash muvafaqqiyatli bajarildi!', 'success');
+      swal("", "Tahrirlash muvafaqqiyatli bajarildi!", "success");
       modal.close();
     });
   };

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
-import { SearchInput, Form, SearchButton } from './Search.style';
+import React, { useState } from "react";
+import { FiSearch } from "react-icons/fi";
+import { SearchInput, Form, SearchButton } from "./Search.style";
 
 const Search = () => {
-  const [inputText, setInputText] = useState('');
+  const [inputText, setInputText] = useState("");
 
   const inputHandler = (e) => {
     let lowerCase = e.target.value.toLowerCase();
@@ -15,7 +15,7 @@ const Search = () => {
       <SearchInput
         type="search"
         placeholder="qidirish..."
-        onChange={inputHandler}
+        onChange={() => inputHandler}
       />
       <SearchButton>
         <FiSearch />
@@ -23,5 +23,4 @@ const Search = () => {
     </Form>
   );
 };
-
 export default Search;

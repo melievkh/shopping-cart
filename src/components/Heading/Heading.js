@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import mobile from '../../styles/media';
+import styled, { css } from "styled-components";
+import mobile from "../../styles/media";
 
 const headingSize = {
   sm: css`
@@ -23,11 +23,11 @@ const headingSize = {
 };
 
 const Heading = styled.h1`
-  ${({ size }) => headingSize[size || 'md']};
-  color: ${({theme})=> theme.heading};
-  text-align: ${({ align }) => align || 'center'};
+  ${({ size }) => headingSize[size || "md"]};
+  color: ${({ theme }) => theme.heading};
+  text-align: ${({ align }) => align || "center"};
   margin: ${({ margin }) => margin || 0};
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 100;
 `;
 

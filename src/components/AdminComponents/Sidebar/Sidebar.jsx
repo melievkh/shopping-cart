@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { BsBasket } from 'react-icons/bs';
-import { AiOutlineDoubleLeft, AiOutlinePlusCircle } from 'react-icons/ai';
-import { MdProductionQuantityLimits } from 'react-icons/md';
-import { SidebarToggler, StyledLink, Wrapper } from './Sidebar.style';
-import useToggle from '../../../hooks/useToggle';
-import Heading from '../../../components/Heading/Heading';
-import Modal from '../../../components/Modal/Modal';
-import Flexbox from '../../Flexbox/Flexbox';
-import CreateProducts from '../../../modal/CreateProducts/CreateProducts';
+import React, { useState } from "react";
+import { BsBasket } from "react-icons/bs";
+import { AiOutlineDoubleLeft, AiOutlinePlusCircle } from "react-icons/ai";
+import { MdProductionQuantityLimits } from "react-icons/md";
+import { SidebarToggler, StyledLink, Wrapper } from "./Sidebar.style";
+import useToggle from "../../../hooks/useToggle";
+import Heading from "../../../components/Heading/Heading";
+import Modal from "../../../components/Modal/Modal";
+import Flexbox from "../../Flexbox/Flexbox";
+import CreateProducts from "../../../modal/CreateProducts/CreateProducts";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <SidebarToggler isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
-        <AiOutlineDoubleLeft style={{ color: 'grey' }} />
+        <AiOutlineDoubleLeft style={{ color: "grey" }} />
       </SidebarToggler>
       {isOpen ? (
         <Heading secondary margin="10px">
@@ -45,7 +45,7 @@ const Sidebar = () => {
         row
         justifyContent="flex-start"
         gap="8px"
-        style={{ cursor: 'pointer' }}
+        style={{ cursor: "pointer" }}
         onClick={modal.open}
       >
         <AiOutlinePlusCircle />

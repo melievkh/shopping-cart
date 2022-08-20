@@ -1,22 +1,22 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React from "react";
+import { useDispatch } from "react-redux";
 import {
   decrementProductByOne,
   incrementProductByOne,
-} from '../../../store/product/actions';
-import Button from '../../Button/Button';
-import Flexbox from '../../Flexbox/Flexbox';
-import Heading from '../../Heading/Heading';
-import Text from '../../Text/Text';
+} from "../../../store/product/actions";
+import Button from "../../Button/Button";
+import Flexbox from "../../Flexbox/Flexbox";
+import Heading from "../../Heading/Heading";
+import Text from "../../Text/Text";
 import {
   Card,
   CardContainer,
   CardDetails,
   CardMedia,
   Wrapper,
-} from './Products.style';
+} from "./Products.style";
 
-const Products = ({ title, products }, {inputText}) => {
+const Products = ({ title, products }, { inputText }) => {
   const dispatch = useDispatch();
 
   return (

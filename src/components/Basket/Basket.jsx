@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { FiShoppingCart } from 'react-icons/fi';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import swal from 'sweetalert';
-import orderApi from '../../api/orderApi';
+import React, { useEffect, useState } from "react";
+import { FiShoppingCart } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+import orderApi from "../../api/orderApi";
 import {
   decrementProductByOne,
   getAllProducts,
   incrementProductByOne,
-} from '../../store/product/actions';
-import Button from '../Button/Button';
-import Flexbox from '../Flexbox/Flexbox';
-import Heading from '../Heading/Heading';
-import Text from '../Text/Text';
+} from "../../store/product/actions";
+import Button from "../Button/Button";
+import Flexbox from "../Flexbox/Flexbox";
+import Heading from "../Heading/Heading";
+import Text from "../Text/Text";
 import {
   AmountDisplayer,
   BasketWrapper,
@@ -25,7 +25,7 @@ import {
   OrderButton,
   ProductsList,
   Wrapper,
-} from './Basket.style';
+} from "./Basket.style";
 
 const Basket = () => {
   const dispatch = useDispatch();
@@ -59,18 +59,18 @@ const Basket = () => {
     e.preventDefault();
     if (!isLoggedIn) {
       swal(
-        'oops!',
-        'Buyurtma berish uchun avval saytga kirishingiz kerak!',
-        'error'
+        "oops!",
+        "Buyurtma berish uchun avval saytga kirishingiz kerak!",
+        "error"
       );
-      navigate('/login');
+      navigate("/login");
     } else {
       orderApi
         .createOrder(orders)
         .then((res) => res.data)
         .catch((err) => err.response.data);
       dispatch(getAllProducts());
-      swal('', 'Buyurtma muvafaqqiyatli yaratildi!', 'success');
+      swal("", "Buyurtma muvafaqqiyatli yaratildi!", "success");
     }
   };
 
@@ -80,10 +80,10 @@ const Basket = () => {
         <BasketWrapper>
           <FiShoppingCart />
           <Heading size="sm">savat</Heading>
-          {amount === 0 ? '' : <AmountDisplayer>{amount}</AmountDisplayer>}
+          {amount === 0 ? "" : <AmountDisplayer>{amount}</AmountDisplayer>}
         </BasketWrapper>
         <DropdownContent>
-          {sum === 0 ? '' : <Text align="end">Jami: {sum} so'm</Text>}
+          {sum === 0 ? "" : <Text align="end">Jami: {sum} so'm</Text>}
           <ProductsList>
             {products.map(
               (product) =>
@@ -124,10 +124,10 @@ const Basket = () => {
           <OrderButton>
             {sum === 0 ? (
               <Flexbox>
-                {theme === 'light' ? (
+                {theme === "light" ? (
                   <Image src="https://st3.depositphotos.com/1784264/12588/i/950/depositphotos_125880634-stock-photo-man-with-a-magnifying-glass.jpg" />
                 ) : (
-                  ''
+                  ""
                 )}
                 <Heading>Savatcha hozircha bo'sh!</Heading>
               </Flexbox>

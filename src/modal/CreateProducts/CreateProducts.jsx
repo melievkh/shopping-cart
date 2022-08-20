@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import swal from 'sweetalert';
-import productApi from '../../api/productApi';
-import { getAllProducts } from '../../store/product/actions';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
-import { Form } from './CreateProducts.style';
-import Heading from '../../components/Heading/Heading';
-import Button from '../../components/Button/Button';
-import Input from '../../components/Input/Input';
-import Flexbox from '../../components/Flexbox/Flexbox';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import swal from "sweetalert";
+import productApi from "../../api/productApi";
+import { getAllProducts } from "../../store/product/actions";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import { Form } from "./CreateProducts.style";
+import Heading from "../../components/Heading/Heading";
+import Button from "../../components/Button/Button";
+import Input from "../../components/Input/Input";
+import Flexbox from "../../components/Flexbox/Flexbox";
 
 const CreateProducts = ({ product, modal }) => {
   const [values, setValues] = useState({});
@@ -18,7 +18,7 @@ const CreateProducts = ({ product, modal }) => {
     e.preventDefault();
     productApi.createProduct(values).then((res) => {
       dispatch(getAllProducts());
-      swal('', 'Mahsulot yaratildi!', 'success');
+      swal("", "Mahsulot yaratildi!", "success");
       modal.close();
     });
   };

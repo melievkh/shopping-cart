@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { COLORS } from '../../../styles/colors';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { COLORS } from "../../../styles/colors";
 
 export const Wrapper = styled.div`
   width: fit-content;
   height: 100%;
-  background-color: ${({theme})=> theme.bgColor};
+  background-color: ${({ theme }) => theme.bgColor};
   position: relative;
   box-sizing: border-box;
   padding: 0 20px;
@@ -25,7 +25,7 @@ export const SidebarToggler = styled.button`
   width: 36px;
   height: 36px;
   color: grey;
-  background-color: ${({theme})=> theme.bgColor};
+  background-color: ${({ theme }) => theme.bgColor};
   border: none;
   border-radius: 50%;
   position: absolute;

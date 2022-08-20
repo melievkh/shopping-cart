@@ -5,7 +5,7 @@ const initialState = {
 
 const productReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'GET_PRODUCTS':
+    case "GET_PRODUCTS":
       return {
         ...state,
         products: action.payload.map((product) => {
@@ -13,7 +13,7 @@ const productReducer = (state = initialState, action) => {
         }),
         sum: 0,
       };
-    case 'INCREMENT':
+    case "INCREMENT":
       return {
         products: state.products.map((product) => {
           if (product.id === action.payload.product) {
@@ -28,7 +28,7 @@ const productReducer = (state = initialState, action) => {
         sum: state.sum + action.payload.price,
       };
 
-    case 'DECREMENT':
+    case "DECREMENT":
       return {
         products: state.products.map((product) => {
           if (product.id === action.payload.product) {

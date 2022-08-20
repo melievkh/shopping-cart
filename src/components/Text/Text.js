@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import mobile from '../../styles/media';
+import styled, { css } from "styled-components";
+import mobile from "../../styles/media";
 
 const textSize = {
   sm: css`
@@ -23,9 +23,9 @@ const textSize = {
 };
 
 const Text = styled.h1`
-  ${({ size }) => textSize[size || 'md']};
+  ${({ size }) => textSize[size || "md"]};
   color: ${({ theme }) => theme.text};
-  text-align: ${({ align }) => align || 'center'};
+  text-align: ${({ align }) => align || "center"};
   margin: ${({ margin }) => margin || 0};
   font-family: sans-serif;
   font-weight: 100;

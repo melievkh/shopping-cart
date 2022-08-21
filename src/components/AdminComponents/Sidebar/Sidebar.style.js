@@ -37,7 +37,7 @@ export const SidebarToggler = styled.button`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 0px,
     rgba(0, 0, 0, 0.3) 0px 0px 1px 0px;
   cursor: pointer;
-  transform: ${({ isOpen }) => !isOpen && `rotate(180deg)`};
+  transform: ${({ isOpen }) => !isOpen && "rotate(180deg)"};
 `;
 
 export const StyledLink = styled(Link)`

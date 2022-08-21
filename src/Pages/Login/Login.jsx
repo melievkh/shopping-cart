@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import swal from 'sweetalert';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
-import { AiOutlineArrowRight } from 'react-icons/ai';
-import { FaUserAlt } from 'react-icons/fa';
-import { Form, Wrapper } from './Login.style';
-import login from '../../store/user/actions';
-import Button from '../../components/Button/Button';
-import Heading from '../../components/Heading/Heading';
-import Input from '../../components/Input/Input';
-import Text from '../../components/Text/Text';
+import React, { useState } from "react";
+import swal from "sweetalert";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { FaUserAlt } from "react-icons/fa";
+import { Form, Wrapper } from "./Login.style";
+import login from "../../store/user/actions";
+import Button from "../../components/Button/Button";
+import Heading from "../../components/Heading/Heading";
+import Input from "../../components/Input/Input";
+import Text from "../../components/Text/Text";
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
   const [details, setDetails] = useState({
-    phoneNumber: '',
-    password: '',
+    phoneNumber: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -28,8 +27,8 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(login(details));
-    swal('', 'Saytga muvafaqqiyatli kirildi!', 'success');
-    navigate('/');
+    swal("", "Saytga muvafaqqiyatli kirildi!", "success");
+    navigate("/");
   };
 
   return (

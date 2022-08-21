@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import Flexbox from '../../components/Flexbox/Flexbox';
+import styled from "styled-components";
+import Flexbox from "../../components/Flexbox/Flexbox";
 
 export const Wrapper = styled(Flexbox)`
   width: 100%;

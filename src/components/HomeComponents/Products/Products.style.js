@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
   span {
     color: ${COLORS.red};
   }
+
+  ${mobile}{
+    padding: 40px 0;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -26,7 +30,7 @@ export const CardContainer = styled.div`
 
   ${mobile} {
     width: auto;
-    padding: 80px 0;
+    padding: 20px 0;
     gap: 10px;
     justify-content: space-evenly;
   }

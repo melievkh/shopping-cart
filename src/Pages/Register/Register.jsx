@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import swal from 'sweetalert';
-import { Form, Wrapper } from './Register.style';
-import { FiUserPlus } from 'react-icons/fi';
-import { Link, useNavigate } from 'react-router-dom';
-import authApi from '../../api/authApi';
-import Button from '../../components/Button/Button';
-import Heading from '../../components/Heading/Heading';
-import Input from '../../components/Input/Input';
-import Text from '../../components/Text/Text';
+import React, { useState } from "react";
+import swal from "sweetalert";
+import { Form, Wrapper } from "./Register.style";
+import { FiUserPlus } from "react-icons/fi";
+import { Link, useNavigate } from "react-router-dom";
+import authApi from "../../api/authApi";
+import Button from "../../components/Button/Button";
+import Heading from "../../components/Heading/Heading";
+import Input from "../../components/Input/Input";
+import Text from "../../components/Text/Text";
 
 const Register = () => {
   const navigate = useNavigate();
 
   const initialState = {
-    username: '',
-    phoneNumber: '',
-    password: '',
-    confirmPassword: '',
+    username: "",
+    phoneNumber: "",
+    password: "",
+    confirmPassword: "",
   };
 
   const [details, setDetails] = useState(initialState);
@@ -30,10 +30,10 @@ const Register = () => {
     authApi
       .register(details)
       .then((res) => {
-        swal('', res.data.message, 'success');
-        navigate('/login');
+        swal("", res.data.message, "success");
+        navigate("/login");
       })
-      .catch((err) => swal('error', err.response.data.message, 'error'));
+      .catch((err) => swal("error", err.response.data.message, "error"));
   };
 
   return (

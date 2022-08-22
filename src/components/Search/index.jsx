@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import { SearchInput, Form, SearchButton } from "./Search.style";
+import { SearchInput, Form, SearchButton } from "./style";
 
 const Search = () => {
   const [inputText, setInputText] = useState("");

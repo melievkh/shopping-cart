@@ -5,7 +5,7 @@ import {
   TitleButton,
   TitleContainer,
   Wrapper,
-} from "./HeroSection.style";
+} from "./style";
 
 const HeroSection = () => {
   return (

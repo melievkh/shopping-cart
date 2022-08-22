@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getHour } from "../../../utils/dateUtils";
 import { getAllOrders } from "../../../store/order/actions";
-import Heading from "../../../components/Heading/Heading";
-import { Table, Wrapper } from "./Order.style";
+import Heading from "../../../components/Heading";
+import { Table, Wrapper } from "./style";
 
 const Orders = () => {
   const dispatch = useDispatch();

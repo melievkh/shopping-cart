@@ -9,10 +9,10 @@ import {
   getAllProducts,
   incrementProductByOne,
 } from "../../store/product/actions";
-import Button from "../Button/Button";
-import Flexbox from "../Flexbox/Flexbox";
-import Heading from "../Heading/Heading";
-import Text from "../Text/Text";
+import Button from "../Button";
+import Flexbox from "../Flexbox";
+import Heading from "../Heading";
+import Text from "../Text";
 import {
   AmountDisplayer,
   BasketWrapper,
@@ -25,7 +25,7 @@ import {
   OrderButton,
   ProductsList,
   Wrapper,
-} from "./Basket.style";
+} from "./style";
 
 const Basket = () => {
   const dispatch = useDispatch();

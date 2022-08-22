@@ -5,19 +5,19 @@ import {
   DropdownContent,
   SwitchButton,
   Wrapper,
-} from "./Navbar.style";
+} from "./style";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ThemeContext } from "../../../App";
 import { FiLogIn, FiLogOut, FiSun } from "react-icons/fi";
 import { BsMoon } from "react-icons/bs";
 import { TbUserCircle } from "react-icons/tb";
-import Flexbox from "../../Flexbox/Flexbox";
-import Button from "../../Button/Button";
-import Heading from "../../Heading/Heading";
-import Basket from "../../Basket/Basket";
-import Search from "../../Search/Search";
-import Text from "../../Text/Text";
+import Flexbox from "../../Flexbox";
+import Button from "../../Button";
+import Heading from "../../Heading";
+import Basket from "../../Basket";
+import Search from "../../Search";
+import Text from "../../Text";
 import { useRef } from "react";
 
 const Navbar = () => {

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import swal from "sweetalert";
-import { Form, Wrapper } from "./Register.style";
+import { Form, Wrapper } from "./style";
 import { FiUserPlus } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import authApi from "../../api/authApi";
-import Button from "../../components/Button/Button";
-import Heading from "../../components/Heading/Heading";
-import Input from "../../components/Input/Input";
-import Text from "../../components/Text/Text";
+import Button from "../../components/Button";
+import Heading from "../../components/Heading";
+import Input from "../../components/Input";
+import Text from "../../components/Text";
 
 const Register = () => {
   const navigate = useNavigate();

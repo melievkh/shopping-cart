@@ -1,8 +1,8 @@
 import React from "react";
-import { Wrapper } from "./Footer.style";
+import { Wrapper } from "./style";
 import { FaTelegram, FaInstagram, FaYoutube } from "react-icons/fa";
-import Heading from "../../Heading/Heading";
-import Flexbox from "../../Flexbox/Flexbox";
+import Heading from "../../Heading";
+import Flexbox from "../../Flexbox";
 import { COLORS } from "../../../styles/colors";
 
 const Footer = () => {

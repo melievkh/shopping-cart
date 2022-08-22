@@ -4,12 +4,12 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
-import { Form, Wrapper } from "./Login.style";
+import { Form, Wrapper } from "./style";
 import login from "../../store/user/actions";
-import Button from "../../components/Button/Button";
-import Heading from "../../components/Heading/Heading";
-import Input from "../../components/Input/Input";
-import Text from "../../components/Text/Text";
+import Heading from "../../components/Heading";
+import Input from "../../components/Input";
+import Text from "../../components/Text";
+import { Button } from "../../components";
 
 const Login = () => {
   const dispatch = useDispatch();

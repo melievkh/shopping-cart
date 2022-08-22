@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Heading from "../../components/Heading/Heading";
-import Navbar from "../../components/Layout/Navbar/Navbar";
+import Heading from "../../components/Heading";
+import Navbar from "../../components/Layout/Navbar";
 import { getMyOrders } from "../../store/order/actions";
 import { getHour } from "../../utils/dateUtils";
-import { Wrapper, Container } from "./MyOrders.style";
+import { Wrapper, Container } from "./style";
 
 const MyOrders = () => {
   const dispatch = useDispatch();

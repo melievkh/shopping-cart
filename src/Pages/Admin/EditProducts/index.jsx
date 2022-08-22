@@ -6,11 +6,11 @@ import { getAllProducts } from "../../../store/product/actions";
 import swal from "sweetalert";
 import productApi from "../../../api/productApi";
 import useToggle from "../../../hooks/useToggle";
-import Heading from "../../../components/Heading/Heading";
-import { Table, Wrapper } from "./EditProducts.style";
-import Modal from "../../../components/Modal/Modal";
-import Edit from "../../../modal/Edit/Edit";
-import Button from "../../../components/Button/Button";
+import Heading from "../../../components/Heading";
+import { Table, Wrapper } from "./style";
+import Modal from "../../../components/Modal";
+import Edit from "../../../modal/Edit";
+import Button from "../../../components/Button";
 
 const Products = () => {
   const dispatch = useDispatch();

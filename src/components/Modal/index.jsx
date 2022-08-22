@@ -1,5 +1,5 @@
 import React from "react";
-import { ModalBackground, ModalContainer } from "./Modal.style";
+import { ModalBackground, ModalContainer } from "./style";
 
 const Modal = ({ isOpen, onClose, children }) => {
   return (

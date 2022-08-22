@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { BsBasket } from "react-icons/bs";
 import { AiOutlineDoubleLeft, AiOutlinePlusCircle } from "react-icons/ai";
 import { MdProductionQuantityLimits } from "react-icons/md";
-import { SidebarToggler, StyledLink, Wrapper } from "./Sidebar.style";
+import { SidebarToggler, StyledLink, Wrapper } from "./style";
 import useToggle from "../../../hooks/useToggle";
-import Heading from "../../../components/Heading/Heading";
-import Modal from "../../../components/Modal/Modal";
-import Flexbox from "../../Flexbox/Flexbox";
-import CreateProducts from "../../../modal/CreateProducts/CreateProducts";
+import Heading from "../../Heading";
+import Modal from "../../Modal";
+import Flexbox from "../../Flexbox";
+import CreateProducts from "../../../modal/CreateProducts";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);

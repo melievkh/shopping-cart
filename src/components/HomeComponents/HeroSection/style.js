@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { COLORS } from "../../../styles/colors";
 import mobile from "../../../styles/media";
-import Button from "../../Button/Button";
-import Heading from "../../Heading/Heading";
+import Button from "../../Button";
+import Heading from "../../Heading";
 
 export const Wrapper = styled.div`
   width: 100%;

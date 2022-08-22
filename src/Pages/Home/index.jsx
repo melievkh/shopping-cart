@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import HeroSection from "../../components/HomeComponents/HeroSection/HeroSection";
-import Products from "../../components/HomeComponents/Products/Products";
-import Footer from "../../components/Layout/Footer/Footer";
-import Navbar from "../../components/Layout/Navbar/Navbar";
+import HeroSection from "../../components/HomeComponents/HeroSection";
+import Products from "../../components/HomeComponents/Products";
+import Footer from "../../components/Layout/Footer";
+import Navbar from "../../components/Layout/Navbar";
 import { getAllProducts } from "../../store/product/actions";
 
 function Home() {

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { COLORS } from "../../styles/colors";
 import mobile from "../../styles/media";
-import Button from "../Button/Button";
-import Input from "../Input/Input";
+import Button from "../Button";
+import Input from "../Input";
 
 export const Form = styled.form`
   width: fit-content;
